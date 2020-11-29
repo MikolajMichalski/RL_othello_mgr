@@ -1,0 +1,837 @@
+Random games won/total: 1/1.0, win %: 100.0%, last score: 1.0
+Random games won/total: 1/2.0, win %: 50.0%, last score: -1
+Random games won/total: 2/3.0, win %: 66.67%, last score: 1.0
+Random games won/total: 2/4.0, win %: 50.0%, last score: -1
+Random games won/total: 3/5.0, win %: 60.0%, last score: 1.0
+Random games won/total: 3/6.0, win %: 50.0%, last score: -1
+Random games won/total: 4/7.0, win %: 57.14%, last score: 1.0
+Random games won/total: 4/8.0, win %: 50.0%, last score: -1
+Random games won/total: 4/9.0, win %: 44.44%, last score: -1
+Random games won/total: 5/10.0, win %: 50.0%, last score: 1.0
+Random games won/total: 6/11.0, win %: 54.55%, last score: 1.0
+Random games won/total: 6/12.0, win %: 50.0%, last score: -1
+Random games won/total: 7/13.0, win %: 53.85%, last score: 1.0
+Random games won/total: 7/14.0, win %: 50.0%, last score: -1
+Random games won/total: 7/15.0, win %: 46.67%, last score: -1
+Random games won/total: 8/16.0, win %: 50.0%, last score: 1.0
+Random games won/total: 8/17.0, win %: 47.06%, last score: -1
+Random games won/total: 8/18.0, win %: 44.44%, last score: -1
+Random games won/total: 9/19.0, win %: 47.37%, last score: 1.0
+Random games won/total: 9/20.0, win %: 45.0%, last score: -1
+Random games won/total: 10/21.0, win %: 47.62%, last score: 1.0
+Random games won/total: 11/22.0, win %: 50.0%, last score: 1.0
+Random games won/total: 12/23.0, win %: 52.17%, last score: 1.0
+Random games won/total: 12/24.0, win %: 50.0%, last score: -1
+Random games won/total: 12/25.0, win %: 48.0%, last score: -1
+Random games won/total: 12/26.0, win %: 46.15%, last score: -1
+Random games won/total: 12/27.0, win %: 44.44%, last score: -1
+Random games won/total: 13/28.0, win %: 46.43%, last score: 1.0
+Random games won/total: 13/29.0, win %: 44.83%, last score: -1
+Random games won/total: 14/30.0, win %: 46.67%, last score: 1.0
+Trained episode: 0, current score: -1 mean_score: 0.0, e: 0.74, iterations (steps): 30
+Trained episode: 1, current score: -1 mean_score: 0.0, e: 0.55, iterations (steps): 60
+Trained episode: 2, current score: -1 mean_score: 0.0, e: 0.4, iterations (steps): 90
+Trained episode: 3, current score: 1.0 mean_score: 0.0, e: 0.3, iterations (steps): 121
+Trained episode: 4, current score: 1.0 mean_score: 0.0, e: 0.22, iterations (steps): 151
+Trained episode: 5, current score: 1.0 mean_score: 0.0, e: 0.16, iterations (steps): 181
+Trained episode: 6, current score: 1.0 mean_score: 0.0, e: 0.12, iterations (steps): 213
+Trained episode: 7, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 243
+Trained episode: 8, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 274
+Trained episode: 9, current score: 1.0 mean_score: 0.0, e: 0.099, iterations (steps): 304
+Trained episode: 10, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 334
+Trained episode: 11, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 364
+Trained episode: 12, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 395
+Trained episode: 13, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 425
+Trained episode: 14, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 456
+Trained episode: 15, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 486
+Trained episode: 16, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 516
+Trained episode: 17, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 546
+Trained episode: 18, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 576
+Trained episode: 19, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 607
+Trained episode: 20, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 637
+Trained episode: 21, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 667
+Trained episode: 22, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 698
+Trained episode: 23, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 728
+Trained episode: 24, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 759
+Trained episode: 25, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 790
+Trained episode: 26, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 820
+Trained episode: 27, current score: 1.0 mean_score: 0.3, e: 0.099, iterations (steps): 851
+Trained episode: 28, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 882
+Trained episode: 29, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 912
+Trained episode: 30, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 942
+Trained episode: 31, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 972
+Trained episode: 32, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 1002
+Trained episode: 33, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 1032
+Trained episode: 34, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 1062
+Trained episode: 35, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 1092
+Trained episode: 36, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 1123
+Trained episode: 37, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 1153
+Trained episode: 38, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 1183
+Trained episode: 39, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 1214
+Trained episode: 40, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 1245
+Trained episode: 41, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 1275
+Trained episode: 42, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 1305
+Trained episode: 43, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 1336
+Trained episode: 44, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 1367
+Trained episode: 45, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 1397
+Trained episode: 46, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 1427
+Trained episode: 47, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 1457
+Trained episode: 48, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 1487
+Trained episode: 49, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 1517
+Trained episode: 50, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 1547
+Trained episode: 51, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 1578
+Trained episode: 52, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 1608
+Trained episode: 53, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 1638
+Trained episode: 54, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 1668
+Trained episode: 55, current score: -1 mean_score: 0.2, e: 0.099, iterations (steps): 1698
+Trained episode: 56, current score: -1 mean_score: 0.2, e: 0.099, iterations (steps): 1728
+Trained episode: 57, current score: -1 mean_score: 0.2, e: 0.099, iterations (steps): 1758
+Trained episode: 58, current score: -1 mean_score: 0.2, e: 0.099, iterations (steps): 1788
+Trained episode: 59, current score: -1 mean_score: 0.2, e: 0.099, iterations (steps): 1819
+Trained episode: 60, current score: 1.0 mean_score: 0.2, e: 0.099, iterations (steps): 1849
+Trained episode: 61, current score: 1.0 mean_score: 0.2, e: 0.099, iterations (steps): 1880
+Trained episode: 62, current score: 1.0 mean_score: 0.2, e: 0.099, iterations (steps): 1910
+Trained episode: 63, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 1941
+Trained episode: 64, current score: 1.0 mean_score: 0.3, e: 0.099, iterations (steps): 1972
+Trained episode: 65, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 2002
+Trained episode: 66, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 2033
+Trained episode: 67, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 2064
+Trained episode: 68, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 2095
+Trained episode: 69, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 2125
+Trained episode: 70, current score: -1 mean_score: 0.9, e: 0.099, iterations (steps): 2156
+Trained episode: 71, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 2187
+Trained episode: 72, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 2218
+Trained episode: 73, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 2248
+Trained episode: 74, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 2279
+Trained episode: 75, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 2309
+Trained episode: 76, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 2339
+Trained episode: 77, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 2369
+Trained episode: 78, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 2400
+Trained episode: 79, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 2430
+Trained episode: 80, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 2460
+Trained episode: 81, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 2490
+Trained episode: 82, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 2520
+Trained episode: 83, current score: -1 mean_score: 0.2, e: 0.099, iterations (steps): 2550
+Trained episode: 84, current score: 1.0 mean_score: 0.2, e: 0.099, iterations (steps): 2580
+Trained episode: 85, current score: 1.0 mean_score: 0.3, e: 0.099, iterations (steps): 2611
+Trained episode: 86, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 2641
+Trained episode: 87, current score: 1.0 mean_score: 0.3, e: 0.099, iterations (steps): 2671
+Trained episode: 88, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 2701
+Trained episode: 89, current score: 1.0 mean_score: 0.3, e: 0.099, iterations (steps): 2731
+Trained episode: 90, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 2761
+Trained episode: 91, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 2791
+Trained episode: 92, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 2823
+Trained episode: 93, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 2854
+Trained episode: 94, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 2884
+Trained episode: 95, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 2914
+Trained episode: 96, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 2946
+Trained episode: 97, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 2976
+Trained episode: 98, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 3006
+Trained episode: 99, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 3037
+Trained episode: 100, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 3067
+Trained episode: 101, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 3097
+Trained episode: 102, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3128
+Trained episode: 103, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3158
+Trained episode: 104, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3188
+Trained episode: 105, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 3219
+Trained episode: 106, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 3250
+Trained episode: 107, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 3281
+Trained episode: 108, current score: 1.0 mean_score: 0.3, e: 0.099, iterations (steps): 3312
+Trained episode: 109, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 3344
+Trained episode: 110, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3374
+Trained episode: 111, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 3404
+Trained episode: 112, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3435
+Trained episode: 113, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3465
+Trained episode: 114, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3496
+Trained episode: 115, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3527
+Trained episode: 116, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3557
+Trained episode: 117, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 3588
+Trained episode: 118, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 3618
+Trained episode: 119, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 3649
+Trained episode: 120, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 3679
+Trained episode: 121, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 3709
+Trained episode: 122, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3740
+Trained episode: 123, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3771
+Trained episode: 124, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 3802
+Trained episode: 125, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3832
+Trained episode: 126, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 3863
+Trained episode: 127, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3893
+Trained episode: 128, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 3923
+Trained episode: 129, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 3954
+Trained episode: 130, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 3985
+Trained episode: 131, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 4016
+Trained episode: 132, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 4047
+Trained episode: 133, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 4077
+Trained episode: 134, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 4107
+Trained episode: 135, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 4137
+Trained episode: 136, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 4167
+Trained episode: 137, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 4197
+Trained episode: 138, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 4228
+Trained episode: 139, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 4258
+Trained episode: 140, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 4288
+Trained episode: 141, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 4319
+Trained episode: 142, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 4349
+Trained episode: 143, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 4380
+Trained episode: 144, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 4410
+Trained episode: 145, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 4440
+Trained episode: 146, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 4470
+Trained episode: 147, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 4501
+Trained episode: 148, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4531
+Trained episode: 149, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4561
+Trained episode: 150, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 4591
+Trained episode: 151, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 4622
+Trained episode: 152, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4652
+Trained episode: 153, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4682
+Trained episode: 154, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4713
+Trained episode: 155, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 4743
+Trained episode: 156, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4774
+Trained episode: 157, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4806
+Trained episode: 158, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4838
+Trained episode: 159, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4868
+Trained episode: 160, current score: 1.0 mean_score: 0.8, e: 0.099, iterations (steps): 4898
+Trained episode: 161, current score: 1.0 mean_score: 0.9, e: 0.099, iterations (steps): 4928
+Trained episode: 162, current score: -1 mean_score: 0.9, e: 0.099, iterations (steps): 4958
+Trained episode: 163, current score: -1 mean_score: 0.8, e: 0.099, iterations (steps): 4989
+Trained episode: 164, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 5019
+Trained episode: 165, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5049
+Trained episode: 166, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 5079
+Trained episode: 167, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5109
+Trained episode: 168, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5139
+Trained episode: 169, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 5169
+Trained episode: 170, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 5199
+Trained episode: 171, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 5230
+Trained episode: 172, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 5260
+Trained episode: 173, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 5290
+Trained episode: 174, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5320
+Trained episode: 175, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5350
+Trained episode: 176, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 5380
+Trained episode: 177, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5410
+Trained episode: 178, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 5440
+Trained episode: 179, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 5470
+Trained episode: 180, current score: 1.0 mean_score: 0.7, e: 0.099, iterations (steps): 5501
+Trained episode: 181, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 5531
+Trained episode: 182, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 5562
+Trained episode: 183, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5592
+Trained episode: 184, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5622
+Trained episode: 185, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5652
+Trained episode: 186, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 5683
+Trained episode: 187, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5714
+Trained episode: 188, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5744
+Trained episode: 189, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5774
+Trained episode: 190, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5804
+Trained episode: 191, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5835
+Trained episode: 192, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 5865
+Trained episode: 193, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 5895
+Trained episode: 194, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 5925
+Trained episode: 195, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 5956
+Trained episode: 196, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 5986
+Trained episode: 197, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 6016
+Trained episode: 198, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6047
+Trained episode: 199, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 6077
+Trained episode: 200, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6107
+Trained episode: 201, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6138
+Trained episode: 202, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 6168
+Trained episode: 203, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6199
+Trained episode: 204, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 6230
+Trained episode: 205, current score: -1 mean_score: 0.7, e: 0.099, iterations (steps): 6262
+Trained episode: 206, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6292
+Trained episode: 207, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6322
+Trained episode: 208, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6352
+Trained episode: 209, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6383
+Trained episode: 210, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6414
+Trained episode: 211, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6444
+Trained episode: 212, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6475
+Trained episode: 213, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 6506
+Trained episode: 214, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6536
+Trained episode: 215, current score: 1.0 mean_score: 0.5, e: 0.099, iterations (steps): 6567
+Trained episode: 216, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6597
+Trained episode: 217, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6627
+Trained episode: 218, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 6658
+Trained episode: 219, current score: 1.0 mean_score: 0.6, e: 0.099, iterations (steps): 6689
+Trained episode: 220, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 6720
+Trained episode: 221, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 6751
+Trained episode: 222, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 6781
+Trained episode: 223, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 6811
+Trained episode: 224, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 6842
+Trained episode: 225, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 6872
+Trained episode: 226, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 6902
+Trained episode: 227, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 6932
+Random games won/total: 0/1.0, win %: 0.0%, last score: -1
+Random games won/total: 0/2.0, win %: 0.0%, last score: -1
+Random games won/total: 1/3.0, win %: 33.33%, last score: 1.0
+Random games won/total: 2/4.0, win %: 50.0%, last score: 1.0
+Random games won/total: 3/5.0, win %: 60.0%, last score: 1.0
+Random games won/total: 3/6.0, win %: 50.0%, last score: -1
+Random games won/total: 3/7.0, win %: 42.86%, last score: -1
+Random games won/total: 3/8.0, win %: 37.5%, last score: -1
+Random games won/total: 3/9.0, win %: 33.33%, last score: -1
+Random games won/total: 4/10.0, win %: 40.0%, last score: 1.0
+Random games won/total: 5/11.0, win %: 45.45%, last score: 1.0
+Random games won/total: 5/12.0, win %: 41.67%, last score: -1
+Random games won/total: 6/13.0, win %: 46.15%, last score: 1.0
+Random games won/total: 6/14.0, win %: 42.86%, last score: -1
+Random games won/total: 7/15.0, win %: 46.67%, last score: 1.0
+Random games won/total: 7/16.0, win %: 43.75%, last score: -1
+Random games won/total: 7/17.0, win %: 41.18%, last score: -1
+Random games won/total: 7/18.0, win %: 38.89%, last score: -1
+Random games won/total: 7/19.0, win %: 36.84%, last score: -1
+Random games won/total: 7/20.0, win %: 35.0%, last score: -1
+Random games won/total: 8/21.0, win %: 38.1%, last score: 1.0
+Random games won/total: 9/22.0, win %: 40.91%, last score: 1.0
+Random games won/total: 10/23.0, win %: 43.48%, last score: 1.0
+Random games won/total: 11/24.0, win %: 45.83%, last score: 1.0
+Random games won/total: 11/25.0, win %: 44.0%, last score: -1
+Random games won/total: 12/26.0, win %: 46.15%, last score: 1.0
+Random games won/total: 12/27.0, win %: 44.44%, last score: -1
+Random games won/total: 12/28.0, win %: 42.86%, last score: -1
+Random games won/total: 12/29.0, win %: 41.38%, last score: -1
+Random games won/total: 13/30.0, win %: 43.33%, last score: 1.0
+Random games won/total: 1/1.0, win %: 100.0%, last score: 1.0
+Random games won/total: 2/2.0, win %: 100.0%, last score: 1.0
+Random games won/total: 2/3.0, win %: 66.67%, last score: -1
+Random games won/total: 2/4.0, win %: 50.0%, last score: -1
+Random games won/total: 3/5.0, win %: 60.0%, last score: 1.0
+Random games won/total: 3/6.0, win %: 50.0%, last score: -1
+Random games won/total: 3/7.0, win %: 42.86%, last score: -1
+Random games won/total: 3/8.0, win %: 37.5%, last score: -1
+Random games won/total: 3/9.0, win %: 33.33%, last score: -1
+Random games won/total: 4/10.0, win %: 40.0%, last score: 1.0
+Random games won/total: 4/11.0, win %: 36.36%, last score: -1
+Random games won/total: 4/12.0, win %: 33.33%, last score: -1
+Random games won/total: 5/13.0, win %: 38.46%, last score: 1.0
+Random games won/total: 5/14.0, win %: 35.71%, last score: -1
+Random games won/total: 5/15.0, win %: 33.33%, last score: -1
+Random games won/total: 5/16.0, win %: 31.25%, last score: -1
+Random games won/total: 6/17.0, win %: 35.29%, last score: 1.0
+Random games won/total: 7/18.0, win %: 38.89%, last score: 1.0
+Random games won/total: 8/19.0, win %: 42.11%, last score: 1.0
+Random games won/total: 8/20.0, win %: 40.0%, last score: -1
+Random games won/total: 8/21.0, win %: 38.1%, last score: -1
+Random games won/total: 9/22.0, win %: 40.91%, last score: 1.0
+Random games won/total: 9/23.0, win %: 39.13%, last score: -1
+Random games won/total: 10/24.0, win %: 41.67%, last score: 1.0
+Random games won/total: 10/25.0, win %: 40.0%, last score: -1
+Random games won/total: 10/26.0, win %: 38.46%, last score: -1
+Random games won/total: 11/27.0, win %: 40.74%, last score: 1.0
+Random games won/total: 12/28.0, win %: 42.86%, last score: 1.0
+Random games won/total: 12/29.0, win %: 41.38%, last score: -1
+Random games won/total: 12/30.0, win %: 40.0%, last score: -1
+Trained episode: 1, current score: -1 mean_score: 0.0, e: 0.74, iterations (steps): 30
+Trained episode: 2, current score: 1.0 mean_score: 0.0, e: 0.54, iterations (steps): 61
+Trained episode: 3, current score: -1 mean_score: 0.0, e: 0.4, iterations (steps): 91
+Trained episode: 4, current score: -1 mean_score: 0.0, e: 0.3, iterations (steps): 121
+Trained episode: 5, current score: 1.0 mean_score: 0.0, e: 0.22, iterations (steps): 151
+Trained episode: 6, current score: 1.0 mean_score: 0.0, e: 0.16, iterations (steps): 181
+Trained episode: 7, current score: 1.0 mean_score: 0.0, e: 0.12, iterations (steps): 211
+Trained episode: 8, current score: 1.0 mean_score: 0.0, e: 0.099, iterations (steps): 242
+Trained episode: 9, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 272
+Trained episode: 10, current score: 1.0 mean_score: 0.0, e: 0.099, iterations (steps): 302
+Trained episode: 11, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 332
+Trained episode: 12, current score: -1 mean_score: 0.6, e: 0.099, iterations (steps): 362
+Trained episode: 13, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 392
+Trained episode: 14, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 423
+Trained episode: 15, current score: -1 mean_score: 0.5, e: 0.099, iterations (steps): 453
+Trained episode: 16, current score: -1 mean_score: 0.4, e: 0.099, iterations (steps): 483
+Trained episode: 17, current score: -1 mean_score: 0.3, e: 0.099, iterations (steps): 513
+Random games won/total: 0/1.0, win %: 0.0%, last score: -1
+Random games won/total: 0/2.0, win %: 0.0%, last score: -1
+Random games won/total: 1/3.0, win %: 33.33%, last score: 1.0
+Random games won/total: 1/4.0, win %: 25.0%, last score: -1
+Random games won/total: 2/5.0, win %: 40.0%, last score: 1.0
+Random games won/total: 2/6.0, win %: 33.33%, last score: -1
+Random games won/total: 3/7.0, win %: 42.86%, last score: 1.0
+Random games won/total: 3/8.0, win %: 37.5%, last score: -1
+Random games won/total: 3/9.0, win %: 33.33%, last score: -1
+Random games won/total: 4/10.0, win %: 40.0%, last score: 1.0
+Random games won/total: 5/11.0, win %: 45.45%, last score: 1.0
+Random games won/total: 5/12.0, win %: 41.67%, last score: -1
+Random games won/total: 5/13.0, win %: 38.46%, last score: -1
+Random games won/total: 6/14.0, win %: 42.86%, last score: 1.0
+Random games won/total: 7/15.0, win %: 46.67%, last score: 1.0
+Random games won/total: 8/16.0, win %: 50.0%, last score: 1.0
+Random games won/total: 8/17.0, win %: 47.06%, last score: -1
+Random games won/total: 8/18.0, win %: 44.44%, last score: -1
+Random games won/total: 9/19.0, win %: 47.37%, last score: 1.0
+Random games won/total: 9/20.0, win %: 45.0%, last score: -1
+Random games won/total: 10/21.0, win %: 47.62%, last score: 1.0
+Random games won/total: 10/22.0, win %: 45.45%, last score: -1
+Random games won/total: 11/23.0, win %: 47.83%, last score: 1.0
+Random games won/total: 11/24.0, win %: 45.83%, last score: -1
+Random games won/total: 12/25.0, win %: 48.0%, last score: 1.0
+Random games won/total: 12/26.0, win %: 46.15%, last score: -1
+Random games won/total: 12/27.0, win %: 44.44%, last score: -1
+Random games won/total: 12/28.0, win %: 42.86%, last score: -1
+Random games won/total: 13/29.0, win %: 44.83%, last score: 1.0
+Random games won/total: 14/30.0, win %: 46.67%, last score: 1.0
+Trained episode: 1, current score: 1.0 mean_score: 0.0, e: 0.73, iterations (steps): 31
+Trained episode: 1, current score: 1.0 mean_score: 0.0, e: 0.73, iterations (steps): 31
+Trained episode: 2, current score: -1 mean_score: 0.0, e: 0.54, iterations (steps): 61
+Trained episode: 2, current score: -1 mean_score: 0.0, e: 0.54, iterations (steps): 61
+Trained episode: 3, current score: -1 mean_score: 0.0, e: 0.4, iterations (steps): 92
+Trained episode: 3, current score: -1 mean_score: 0.0, e: 0.4, iterations (steps): 92
+Trained episode: 4, current score: 1.0 mean_score: 0.0, e: 0.29, iterations (steps): 123
+Trained episode: 4, current score: 1.0 mean_score: 0.0, e: 0.29, iterations (steps): 123
+Trained episode: 5, current score: 1.0 mean_score: 0.0, e: 0.21, iterations (steps): 154
+Trained episode: 5, current score: 1.0 mean_score: 0.0, e: 0.21, iterations (steps): 154
+Trained episode: 6, current score: -1 mean_score: 0.0, e: 0.16, iterations (steps): 184
+Trained episode: 6, current score: -1 mean_score: 0.0, e: 0.16, iterations (steps): 184
+Trained episode: 7, current score: 1.0 mean_score: 0.0, e: 0.12, iterations (steps): 214
+Trained episode: 7, current score: 1.0 mean_score: 0.0, e: 0.12, iterations (steps): 214
+Trained episode: 8, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 244
+Trained episode: 8, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 244
+Trained episode: 9, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 274
+Trained episode: 9, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 274
+Trained episode: 10, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 304
+Trained episode: 10, current score: -1 mean_score: 0.0, e: 0.099, iterations (steps): 304
+Trained episode: 11, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 334
+Trained episode: 11, current score: 1.0 mean_score: 0.4, e: 0.099, iterations (steps): 334
+Random games won/total: 0/1.0, win %: 0.0%, last score: -1
+Random games won/total: 1/2.0, win %: 50.0%, last score: 1.0
+Random games won/total: 1/3.0, win %: 33.33%, last score: -1
+Random games won/total: 2/4.0, win %: 50.0%, last score: 1.0
+Random games won/total: 3/5.0, win %: 60.0%, last score: 1.0
+Random games won/total: 4/6.0, win %: 66.67%, last score: 1.0
+Random games won/total: 5/7.0, win %: 71.43%, last score: 1.0
+Random games won/total: 5/8.0, win %: 62.5%, last score: -1
+Random games won/total: 6/9.0, win %: 66.67%, last score: 1.0
+Random games won/total: 6/10.0, win %: 60.0%, last score: -1
+Random games won/total: 6/11.0, win %: 54.55%, last score: -1
+Random games won/total: 6/12.0, win %: 50.0%, last score: -1
+Random games won/total: 7/13.0, win %: 53.85%, last score: 1.0
+Random games won/total: 8/14.0, win %: 57.14%, last score: 1.0
+Random games won/total: 8/15.0, win %: 53.33%, last score: -1
+Random games won/total: 8/16.0, win %: 50.0%, last score: -1
+Random games won/total: 8/17.0, win %: 47.06%, last score: -1
+Random games won/total: 8/18.0, win %: 44.44%, last score: -1
+Random games won/total: 8/19.0, win %: 42.11%, last score: -1
+Random games won/total: 9/20.0, win %: 45.0%, last score: 1.0
+Random games won/total: 10/21.0, win %: 47.62%, last score: 1.0
+Random games won/total: 11/22.0, win %: 50.0%, last score: 1.0
+Random games won/total: 11/23.0, win %: 47.83%, last score: -1
+Random games won/total: 12/24.0, win %: 50.0%, last score: 1.0
+Random games won/total: 13/25.0, win %: 52.0%, last score: 1.0
+Random games won/total: 13/26.0, win %: 50.0%, last score: -1
+Random games won/total: 14/27.0, win %: 51.85%, last score: 1.0
+Random games won/total: 15/28.0, win %: 53.57%, last score: 1.0
+Random games won/total: 15/29.0, win %: 51.72%, last score: -1
+Random games won/total: 16/30.0, win %: 53.33%, last score: 1.0
+Trained episode: 1, current score: -1 mean_score: 0.0, e: 0.74, iterations (steps): 30
+Trained episode: 2, current score: -1 mean_score: 0.0, e: 0.55, iterations (steps): 60
+Trained episode: 3, current score: 1.0 mean_score: 0.0, e: 0.4, iterations (steps): 91
+Trained episode: 4, current score: 1.0 mean_score: 0.0, e: 0.3, iterations (steps): 121
+Trained episode: 5, current score: -1 mean_score: 0.0, e: 0.22, iterations (steps): 151
+Random games won/total: 1/1.0, win %: 100.0%, last score: 1.0
+Random games won/total: 2/2.0, win %: 100.0%, last score: 1.0
+Random games won/total: 3/3.0, win %: 100.0%, last score: 1.0
+Random games won/total: 4/4.0, win %: 100.0%, last score: 1.0
+Random games won/total: 5/5.0, win %: 100.0%, last score: 1.0
+Random games won/total: 5/6.0, win %: 83.33%, last score: -1
+Random games won/total: 6/7.0, win %: 85.71%, last score: 1.0
+Random games won/total: 7/8.0, win %: 87.5%, last score: 1.0
+Random games won/total: 8/9.0, win %: 88.89%, last score: 1.0
+Random games won/total: 9/10.0, win %: 90.0%, last score: 1.0
+Random games won/total: 10/11.0, win %: 90.91%, last score: 1.0
+Random games won/total: 10/12.0, win %: 83.33%, last score: -1
+Random games won/total: 11/13.0, win %: 84.62%, last score: 1.0
+Random games won/total: 11/14.0, win %: 78.57%, last score: -1
+Random games won/total: 11/15.0, win %: 73.33%, last score: -1
+Random games won/total: 11/16.0, win %: 68.75%, last score: -1
+Random games won/total: 12/17.0, win %: 70.59%, last score: 1.0
+Random games won/total: 12/18.0, win %: 66.67%, last score: -1
+Random games won/total: 13/19.0, win %: 68.42%, last score: 1.0
+Random games won/total: 13/20.0, win %: 65.0%, last score: -1
+Random games won/total: 14/21.0, win %: 66.67%, last score: 1.0
+Random games won/total: 15/22.0, win %: 68.18%, last score: 1.0
+Random games won/total: 16/23.0, win %: 69.57%, last score: 1.0
+Random games won/total: 17/24.0, win %: 70.83%, last score: 1.0
+Random games won/total: 17/25.0, win %: 68.0%, last score: -1
+Random games won/total: 18/26.0, win %: 69.23%, last score: 1.0
+Random games won/total: 19/27.0, win %: 70.37%, last score: 1.0
+Random games won/total: 20/28.0, win %: 71.43%, last score: 1.0
+Random games won/total: 20/29.0, win %: 68.97%, last score: -1
+Random games won/total: 20/30.0, win %: 66.67%, last score: -1
+Trained episode: 1, current score: -1 mean_score: 0.0, e: 0.74, iterations (steps): 30
+Trained episode: 2, current score: 1.0 mean_score: 0.0, e: 0.55, iterations (steps): 60
+Trained episode: 3, current score: -1 mean_score: 0.0, e: 0.4, iterations (steps): 90
+Trained episode: 4, current score: -1 mean_score: 0.0, e: 0.3, iterations (steps): 121
+Trained episode: 5, current score: -1 mean_score: 0.0, e: 0.22, iterations (steps): 151
+Trained episode: 6, current score: 1.0 mean_score: 0.0, e: 0.16, iterations (steps): 182
+Trained episode: 7, current score: -1 mean_score: 0.0, e: 0.12, iterations (steps): 212
+Trained episode: 8, current score: 1.0 mean_score: 0.0, e: 0.087, iterations (steps): 243
+Trained episode: 9, current score: 1.0 mean_score: 0.0, e: 0.064, iterations (steps): 273
+Trained episode: 10, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 303
+Trained episode: 11, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 333
+Trained episode: 12, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 363
+Trained episode: 13, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 393
+Trained episode: 14, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 424
+Trained episode: 15, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 454
+Trained episode: 16, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 484
+Trained episode: 17, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 514
+Trained episode: 18, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 544
+Trained episode: 19, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 574
+Trained episode: 20, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 606
+Trained episode: 21, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 637
+Trained episode: 22, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 669
+Trained episode: 23, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 700
+Trained episode: 24, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 730
+Trained episode: 25, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 761
+Trained episode: 26, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 791
+Trained episode: 27, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 821
+Trained episode: 28, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 851
+Trained episode: 29, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 881
+Trained episode: 30, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 911
+Trained episode: 31, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 941
+Trained episode: 32, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 971
+Trained episode: 33, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1002
+Trained episode: 34, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1033
+Trained episode: 35, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1064
+Trained episode: 36, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1094
+Trained episode: 37, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 1125
+Trained episode: 38, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 1155
+Trained episode: 39, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1185
+Trained episode: 40, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1216
+Trained episode: 41, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1246
+Trained episode: 42, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1276
+Trained episode: 43, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1307
+Trained episode: 44, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 1337
+Trained episode: 45, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1368
+Trained episode: 46, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1398
+Trained episode: 47, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1428
+Trained episode: 48, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1458
+Trained episode: 49, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1489
+Trained episode: 50, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1520
+Trained episode: 51, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 1551
+Trained episode: 52, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1581
+Trained episode: 53, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 1611
+Trained episode: 54, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1642
+Trained episode: 55, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 1672
+Trained episode: 56, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 1702
+Trained episode: 57, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 1732
+Trained episode: 58, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1762
+Trained episode: 59, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1793
+Trained episode: 60, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 1823
+Trained episode: 61, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 1853
+Trained episode: 62, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 1884
+Trained episode: 63, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 1915
+Trained episode: 64, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 1945
+Trained episode: 65, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 1975
+Trained episode: 66, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 2006
+Trained episode: 67, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2037
+Trained episode: 68, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2068
+Trained episode: 69, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2099
+Trained episode: 70, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 2129
+Trained episode: 71, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2160
+Trained episode: 72, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 2190
+Trained episode: 73, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 2221
+Trained episode: 74, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 2251
+Trained episode: 75, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 2281
+Trained episode: 76, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 2311
+Trained episode: 77, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 2341
+Trained episode: 78, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 2371
+Trained episode: 79, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 2401
+Trained episode: 80, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 2431
+Trained episode: 81, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 2461
+Trained episode: 82, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 2491
+Trained episode: 83, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 2522
+Trained episode: 84, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 2552
+Trained episode: 85, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 2582
+Trained episode: 86, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 2612
+Trained episode: 87, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 2642
+Trained episode: 88, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2672
+Trained episode: 89, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2702
+Trained episode: 90, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 2732
+Trained episode: 91, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 2762
+Trained episode: 92, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 2792
+Trained episode: 93, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 2823
+Trained episode: 94, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 2854
+Trained episode: 95, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 2884
+Trained episode: 96, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 2914
+Trained episode: 97, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 2945
+Trained episode: 98, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 2975
+Trained episode: 99, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 3005
+Trained episode: 100, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 3035
+Trained episode: 101, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 3065
+Trained episode: 102, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 3096
+Trained episode: 103, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 3126
+Trained episode: 104, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 3156
+Trained episode: 105, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 3186
+Trained episode: 106, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 3216
+Trained episode: 107, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 3247
+Trained episode: 108, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 3278
+Trained episode: 109, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 3308
+Trained episode: 110, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 3338
+Trained episode: 111, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 3368
+Trained episode: 112, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 3400
+Trained episode: 113, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 3431
+Trained episode: 114, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 3461
+Trained episode: 115, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 3491
+Trained episode: 116, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 3521
+Trained episode: 117, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 3552
+Trained episode: 118, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 3582
+Trained episode: 119, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 3612
+Trained episode: 120, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 3643
+Trained episode: 121, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 3675
+Trained episode: 122, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 3705
+Trained episode: 123, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 3735
+Trained episode: 124, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 3765
+Trained episode: 125, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 3795
+Trained episode: 126, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 3826
+Trained episode: 127, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 3856
+Trained episode: 128, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 3886
+Trained episode: 129, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 3916
+Trained episode: 130, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 3946
+Trained episode: 131, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 3976
+Trained episode: 132, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 4007
+Trained episode: 133, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 4039
+Trained episode: 134, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 4070
+Trained episode: 135, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 4101
+Trained episode: 136, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 4131
+Trained episode: 137, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 4162
+Trained episode: 138, current score: 1.0 mean_score: 0.9, e: 0.05, iterations (steps): 4192
+Trained episode: 139, current score: -1 mean_score: 0.8, e: 0.05, iterations (steps): 4222
+Trained episode: 140, current score: 1.0 mean_score: 0.9, e: 0.05, iterations (steps): 4252
+Trained episode: 141, current score: -1 mean_score: 0.8, e: 0.05, iterations (steps): 4283
+Trained episode: 142, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 4313
+Trained episode: 143, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 4343
+Trained episode: 144, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 4373
+Trained episode: 145, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 4403
+Trained episode: 146, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 4434
+Trained episode: 147, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 4465
+Trained episode: 148, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 4495
+Trained episode: 149, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 4525
+Trained episode: 150, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 4555
+Trained episode: 151, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 4585
+Trained episode: 152, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 4616
+Trained episode: 153, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 4647
+Trained episode: 154, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 4677
+Trained episode: 155, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 4708
+Trained episode: 156, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 4738
+Trained episode: 157, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 4770
+Trained episode: 158, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 4800
+Trained episode: 159, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 4830
+Trained episode: 160, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 4860
+Trained episode: 161, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 4890
+Trained episode: 162, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 4920
+Trained episode: 163, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 4950
+Trained episode: 164, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 4980
+Trained episode: 165, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 5010
+Trained episode: 166, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 5042
+Trained episode: 167, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5072
+Trained episode: 168, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 5102
+Trained episode: 169, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 5132
+Trained episode: 170, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 5163
+Trained episode: 171, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 5193
+Trained episode: 172, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5223
+Trained episode: 173, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 5253
+Trained episode: 174, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5284
+Trained episode: 175, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5314
+Trained episode: 176, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 5344
+Trained episode: 177, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 5376
+Trained episode: 178, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 5406
+Trained episode: 179, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 5436
+Trained episode: 180, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 5466
+Trained episode: 181, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 5497
+Trained episode: 182, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 5527
+Trained episode: 183, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5557
+Trained episode: 184, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5587
+Trained episode: 185, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 5618
+Trained episode: 186, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 5648
+Trained episode: 187, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 5678
+Trained episode: 188, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 5709
+Trained episode: 189, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5739
+Trained episode: 190, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 5769
+Trained episode: 191, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 5800
+Trained episode: 192, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 5830
+Trained episode: 193, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 5860
+Trained episode: 194, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 5890
+Trained episode: 195, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 5920
+Trained episode: 196, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 5951
+Trained episode: 197, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 5981
+Trained episode: 198, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 6012
+Trained episode: 199, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 6042
+Trained episode: 200, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 6073
+Trained episode: 201, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 6104
+Trained episode: 202, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 6134
+Trained episode: 203, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 6167
+Trained episode: 204, current score: -1 mean_score: 0.8, e: 0.05, iterations (steps): 6197
+Trained episode: 205, current score: -1 mean_score: 0.8, e: 0.05, iterations (steps): 6228
+Trained episode: 206, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 6258
+Trained episode: 207, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 6288
+Trained episode: 208, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 6318
+Trained episode: 209, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 6348
+Trained episode: 210, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 6379
+Trained episode: 211, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 6409
+Trained episode: 212, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 6439
+Trained episode: 213, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 6469
+Trained episode: 214, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 6499
+Trained episode: 215, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 6531
+Trained episode: 216, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 6562
+Trained episode: 217, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 6593
+Trained episode: 218, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 6623
+Trained episode: 219, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 6653
+Trained episode: 220, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 6683
+Trained episode: 221, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 6713
+Trained episode: 222, current score: -1 mean_score: 0.8, e: 0.05, iterations (steps): 6744
+Trained episode: 223, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 6774
+Trained episode: 224, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 6805
+Trained episode: 225, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 6837
+Trained episode: 226, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 6868
+Trained episode: 227, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 6898
+Trained episode: 228, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 6928
+Trained episode: 229, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 6959
+Trained episode: 230, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 6989
+Trained episode: 231, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 7019
+Trained episode: 232, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 7049
+Trained episode: 233, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 7080
+Trained episode: 234, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 7110
+Trained episode: 235, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 7140
+Trained episode: 236, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7171
+Trained episode: 237, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 7201
+Trained episode: 238, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 7231
+Trained episode: 239, current score: 1.0 mean_score: 0.2, e: 0.05, iterations (steps): 7263
+Trained episode: 240, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 7294
+Trained episode: 241, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7325
+Trained episode: 242, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 7355
+Trained episode: 243, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 7385
+Trained episode: 244, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 7415
+Trained episode: 245, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7445
+Trained episode: 246, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7475
+Trained episode: 247, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7505
+Trained episode: 248, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7535
+Trained episode: 249, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 7565
+Trained episode: 250, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 7596
+Trained episode: 251, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7626
+Trained episode: 252, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7656
+Trained episode: 253, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 7686
+Trained episode: 254, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 7716
+Trained episode: 255, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 7747
+Trained episode: 256, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 7777
+Trained episode: 257, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 7807
+Trained episode: 258, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 7838
+Trained episode: 259, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 7868
+Trained episode: 260, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 7899
+Trained episode: 261, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 7930
+Trained episode: 262, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 7960
+Trained episode: 263, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 7990
+Trained episode: 264, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 8020
+Trained episode: 265, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 8050
+Trained episode: 266, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 8081
+Trained episode: 267, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 8111
+Trained episode: 268, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 8141
+Trained episode: 269, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 8171
+Trained episode: 270, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 8201
+Trained episode: 271, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 8231
+Trained episode: 272, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 8261
+Trained episode: 273, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 8291
+Trained episode: 274, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 8321
+Trained episode: 275, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 8351
+Trained episode: 276, current score: 1.0 mean_score: 0.2, e: 0.05, iterations (steps): 8381
+Trained episode: 277, current score: -1 mean_score: 0.1, e: 0.05, iterations (steps): 8412
+Trained episode: 278, current score: -1 mean_score: 0.1, e: 0.05, iterations (steps): 8442
+Trained episode: 279, current score: -1 mean_score: 0.1, e: 0.05, iterations (steps): 8472
+Trained episode: 280, current score: -1 mean_score: 0.1, e: 0.05, iterations (steps): 8503
+Trained episode: 281, current score: -1 mean_score: 0.1, e: 0.05, iterations (steps): 8534
+Trained episode: 282, current score: 1.0 mean_score: 0.2, e: 0.05, iterations (steps): 8565
+Trained episode: 283, current score: -1 mean_score: 0.2, e: 0.05, iterations (steps): 8596
+Trained episode: 284, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 8626
+Trained episode: 285, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 8656
+Trained episode: 286, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 8686
+Trained episode: 287, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 8716
+Trained episode: 288, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 8747
+Trained episode: 289, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 8779
+Trained episode: 290, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 8810
+Trained episode: 291, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 8841
+Trained episode: 292, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 8871
+Trained episode: 293, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 8902
+Trained episode: 294, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 8932
+Trained episode: 295, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 8962
+Trained episode: 296, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 8992
+Trained episode: 297, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9022
+Trained episode: 298, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 9052
+Trained episode: 299, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 9083
+Trained episode: 300, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 9113
+Trained episode: 301, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 9143
+Trained episode: 302, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 9173
+Trained episode: 303, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9203
+Trained episode: 304, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 9233
+Trained episode: 305, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9264
+Trained episode: 306, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9294
+Trained episode: 307, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9324
+Trained episode: 308, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9355
+Trained episode: 309, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9386
+Trained episode: 310, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9417
+Trained episode: 311, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9447
+Trained episode: 312, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9477
+Trained episode: 313, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9508
+Trained episode: 314, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 9540
+Trained episode: 315, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 9571
+Trained episode: 316, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9602
+Trained episode: 317, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9632
+Trained episode: 318, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9663
+Trained episode: 319, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9694
+Trained episode: 320, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9724
+Trained episode: 321, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9755
+Trained episode: 322, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 9785
+Trained episode: 323, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9815
+Trained episode: 324, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 9845
+Trained episode: 325, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 9875
+Trained episode: 326, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 9906
+Trained episode: 327, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 9937
+Trained episode: 328, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 9967
+Trained episode: 329, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 9998
+Trained episode: 330, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 10029
+Trained episode: 331, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 10059
+Trained episode: 332, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 10089
+Trained episode: 333, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 10120
+Trained episode: 334, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 10150
+Trained episode: 335, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 10180
+Trained episode: 336, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 10211
+Trained episode: 337, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 10241
+Trained episode: 338, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 10271
+Trained episode: 339, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 10301
+Trained episode: 340, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 10332
+Trained episode: 341, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 10362
+Trained episode: 342, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 10392
+Trained episode: 343, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 10422
+Trained episode: 344, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 10453
+Trained episode: 345, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 10483
+Trained episode: 346, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 10513
+Trained episode: 347, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 10543
+Trained episode: 348, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 10573
+Trained episode: 349, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 10603
+Trained episode: 350, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 10634
+Trained episode: 351, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 10665
+Trained episode: 352, current score: 1.0 mean_score: 0.8, e: 0.05, iterations (steps): 10696
+Trained episode: 353, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 10726
+Trained episode: 354, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 10757
+Trained episode: 355, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 10787
+Trained episode: 356, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 10819
+Trained episode: 357, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 10849
+Trained episode: 358, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 10881
+Trained episode: 359, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 10912
+Trained episode: 360, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 10942
+Trained episode: 361, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 10972
+Trained episode: 362, current score: 1.0 mean_score: 0.6, e: 0.05, iterations (steps): 11003
+Trained episode: 363, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 11034
+Trained episode: 364, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 11065
+Trained episode: 365, current score: -1 mean_score: 0.7, e: 0.05, iterations (steps): 11095
+Trained episode: 366, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 11125
+Trained episode: 367, current score: 1.0 mean_score: 0.7, e: 0.05, iterations (steps): 11156
+Trained episode: 368, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 11187
+Trained episode: 369, current score: -1 mean_score: 0.6, e: 0.05, iterations (steps): 11218
+Trained episode: 370, current score: -1 mean_score: 0.5, e: 0.05, iterations (steps): 11248
+Trained episode: 371, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 11278
+Trained episode: 372, current score: 1.0 mean_score: 0.5, e: 0.05, iterations (steps): 11308
+Trained episode: 373, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 11338
+Trained episode: 374, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 11368
+Trained episode: 375, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 11398
+Trained episode: 376, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 11429
+Trained episode: 377, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 11460
+Trained episode: 378, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 11491
+Trained episode: 379, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 11522
+Trained episode: 380, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 11553
+Trained episode: 381, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 11584
+Trained episode: 382, current score: 1.0 mean_score: 0.3, e: 0.05, iterations (steps): 11615
+Trained episode: 383, current score: 1.0 mean_score: 0.4, e: 0.05, iterations (steps): 11646
+Trained episode: 384, current score: -1 mean_score: 0.4, e: 0.05, iterations (steps): 11676
+Trained episode: 385, current score: -1 mean_score: 0.3, e: 0.05, iterations (steps): 11706
