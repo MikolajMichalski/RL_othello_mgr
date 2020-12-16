@@ -4,9 +4,9 @@ import random
 from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
-EPISODES = 100
+EPISODES = 1000
 BATCH_SIZE = 50
-outputFilePath = "TestSave/output.txt"
+outputFilePath = "TestSave/relu_activation_Adam_optimizer_flipped_as_reward.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):
@@ -39,17 +39,20 @@ if __name__ == '__main__':
         #state = env.state
         env.possible_actions = ReversiEnv.get_possible_actions(env.state, env.currently_playing_color)
         learningAgent_action = learningAgent.get_action_to_make(state)
-        next_state, reward, done, _ = env.step(learningAgent_action)
+        next_state, reward1, done, _ = env.step(learningAgent_action)
         next_state = np.reshape(next_state, [1, state_size])
         #state = np.reshape(state, [1, state_size])
-        learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
+        #learningAgent.replay_buffer_save(state, learningAgent_action, reward1, next_state, done)
         state = next_state
         env.render()
         env.currently_playing_color = opponentAgent.player_color
         env.possible_actions = ReversiEnv.get_possible_actions(env.state, env.currently_playing_color)
         opponentAgent_action = opponentAgent.get_action_to_make(state)
-        next_state, _, done, _ = env.step(opponentAgent_action)
+        next_state, reward2, done, _ = env.step(opponentAgent_action)
         next_state = np.reshape(next_state, [1, state_size])
+
+        reward = reward1 - reward2
+        learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
         state = next_state
         env.render()
         if len(learningAgent.memory) > BATCH_SIZE:
@@ -60,7 +63,7 @@ if __name__ == '__main__':
             #env.reset()
             black_score = len(np.where(env.state[0, :, :] == 1)[0])
             white_score = len(np.where(env.state[1, :, :] == 1)[0])
-            if reward > 0:
+            if black_score>white_score:
                 games_won += 1
                 learningAgent.save("TestSave/model_weights.h5")
                 learningAgent.target_model.save("TestSave/target_model_weights.h5")
@@ -89,11 +92,11 @@ if __name__ == '__main__':
                                          black_score, white_score))
 
             state = env.reset()
-            if episodes_counter % 10 == 0:
-                print("Syncing agents weights...")
-                writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
-                syncAgentsWeights(learningAgent, opponentAgent)
-                opponentAgent.epsilon = 0
+            # if episodes_counter % 10 == 0:
+            #     print("Syncing agents weights...")
+            #     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
+            #     syncAgentsWeights(learningAgent, opponentAgent)
+            #     opponentAgent.epsilon = 0
 
 
 

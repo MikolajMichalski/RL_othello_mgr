@@ -115,7 +115,7 @@ class ReversiEnv(gym.Env):
         return obs
 
     def step(self, action):
-
+        initial_current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
         if self.done:
             obs = self.getCurrentObservations(self.state)
             return obs, 0., True, {'state': self.state}
@@ -127,12 +127,15 @@ class ReversiEnv(gym.Env):
                 self.done = True
                 obs = self.getCurrentObservations(self.state)
 
-                black_score = len(np.where(self.state[0, :, :] == 1)[0])
-                white_score = len(np.where(self.state[1, :, :] == 1)[0])
-                if black_score > white_score:  # score >= 32:
-                    reward = 1.
-                else:
-                    reward = -1.
+                current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
+                reward = initial_current_player_score - current_player_score
+                # white_score = len(np.where(self.state[1, :, :] == 1)[0])
+
+                current_player_score = 0
+                # if black_score > white_score:  # score >= 32:
+                #     reward = black_score - white_score
+                # else:
+                # reward = black_score - white_score
 
                 return obs, reward, self.done, {'state': self.state}
 
@@ -154,18 +157,22 @@ class ReversiEnv(gym.Env):
         else:
             ReversiEnv.make_place(self.state, action, self.currently_playing_color)
 
-        reward = -1.0
+        current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
+        reward = initial_current_player_score - current_player_score
 
         obs = self.getCurrentObservations(self.state)
 
         self.done = self.isFinished(self.state)
+
         if self.done:
-            black_score = len(np.where(self.state[0, :, :] == 1)[0])
-            white_score = len(np.where(self.state[1, :, :] == 1)[0])
-            if black_score > white_score:  # score >= 32:
-                reward = 1.
-            else:
-                reward = -1.
+            # black_score = len(np.where(self.state[0, :, :] == 1)[0])
+            # white_score = len(np.where(self.state[1, :, :] == 1)[0])
+            # if black_score > white_score:  # score >= 32:
+            #     reward = black_score - white_score
+            # else:
+            #reward = black_score - white_score
+            current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
+            reward = initial_current_player_score - current_player_score
             return obs, reward, self.done, {'state': self.state}
         #self.render()
         return obs, reward, self.done, {'state': self.state}
