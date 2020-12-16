@@ -1,5 +1,6 @@
 from Reversi_combined import ReversiEnv
 from Agents.NNAgent import DDQNAgent
+from collections import deque
 import random
 from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
@@ -21,12 +22,14 @@ def writeStdOutputToFile(filePath, text):
 
 if __name__ == '__main__':
     episodes_counter = 0
+    last_hundred_episodes_scores = deque(maxlen=100)
     env = ReversiEnv("random", "numpy3c", "lose", 8)
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
     learningAgent = DDQNAgent(state_size, action_size, env, 0)
     opponentAgent = DDQNAgent(state_size, action_size, env, 1)
     games_won = 0
+    last_hundred_win_precentage = 0
     state = env.reset()
     #state = env.reset()
     env.render()
@@ -63,34 +66,38 @@ if __name__ == '__main__':
             #env.reset()
             black_score = len(np.where(env.state[0, :, :] == 1)[0])
             white_score = len(np.where(env.state[1, :, :] == 1)[0])
+
             if black_score>white_score:
+                last_hundred_episodes_scores.append(1)
                 games_won += 1
                 learningAgent.save("TestSave/model_weights.h5")
                 learningAgent.target_model.save("TestSave/target_model_weights.h5")
 
                 print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}".format(
+                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
                                                                                     games_won, episodes_counter,
                                                                                     games_won / episodes_counter * 100,
-                                                                                    black_score, white_score))
-                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}".format(
+                                                                                    black_score, white_score, last_hundred_win_precentage))
+                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
                     games_won, episodes_counter,
                     games_won / episodes_counter * 100,
-                    black_score, white_score))
+                    black_score, white_score, last_hundred_win_precentage))
             else:
+                last_hundred_episodes_scores.append(0)
 
                 print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}".format(
+                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
                                                                                     games_won,
                                                                                     episodes_counter,
                                                                                     games_won / episodes_counter * 100,
-                                                                                    black_score, white_score))
+                                                                                    black_score, white_score, last_hundred_win_precentage))
                 writeStdOutputToFile(outputFilePath,
-                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}".format(
+                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
                                         games_won, episodes_counter,
                                          games_won / episodes_counter * 100,
-                                         black_score, white_score))
+                                         black_score, white_score, last_hundred_win_precentage))
 
+            last_hundred_win_precentage = last_hundred_episodes_scores.count(1) / 100
             state = env.reset()
             # if episodes_counter % 10 == 0:
             #     print("Syncing agents weights...")
