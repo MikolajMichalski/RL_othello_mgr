@@ -47,7 +47,7 @@ if __name__ == '__main__':
         #state = np.reshape(state, [1, state_size])
         #learningAgent.replay_buffer_save(state, learningAgent_action, reward1, next_state, done)
         state = next_state
-        env.render()
+        #env.render()
         env.currently_playing_color = opponentAgent.player_color
         env.possible_actions = ReversiEnv.get_possible_actions(env.state, env.currently_playing_color)
         opponentAgent_action = opponentAgent.get_action_to_make(state)
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         reward = reward1 - reward2
         learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
         state = next_state
-        env.render()
+        #env.render()
         if len(learningAgent.memory) > BATCH_SIZE:
             learningAgent.replay(BATCH_SIZE)
         if done:
