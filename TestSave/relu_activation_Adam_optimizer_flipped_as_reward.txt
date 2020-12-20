@@ -507,3 +507,4 @@ Games won/total: 42/446, win %: 9.417%, last score - black/white:5/7
 Games won/total: 42/447, win %: 9.396%, last score - black/white:5/7
 Games won/total: 42/448, win %: 9.375%, last score - black/white:5/7
 Games won/total: 0/1, win %: 0.0%, last score - black/white:21/43
+Games won/total: 0/1, win %: 0.0%, last score - black/white:20/44, last 100 games win precentage: 0

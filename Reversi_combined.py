@@ -119,7 +119,7 @@ class ReversiEnv(gym.Env):
         if self.done:
             obs = self.getCurrentObservations(self.state)
             return obs, 0., True, {'state': self.state}
-        if ReversiEnv.pass_place(self.board_size, action):
+        if len(self.possible_actions) == 0:#ReversiEnv.pass_place(self.board_size, action):
             self.pass_place_counter += 1
             if self.pass_place_counter <= 1:
                 pass
@@ -224,7 +224,7 @@ class ReversiEnv(gym.Env):
 
     @staticmethod
     def pass_place(board_size, action):
-        return ReversiEnv.possible_actions == 0 #action == board_size ** 2 + 1
+        return len(ReversiEnv.possible_actions) == 0 #action == board_size ** 2 + 1
 
     @staticmethod
     def get_possible_actions(board, player_color):
