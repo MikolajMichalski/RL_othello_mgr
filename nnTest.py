@@ -34,6 +34,9 @@ if __name__ == '__main__':
     #state = env.reset()
     env.render()
     while True:
+        reward1 = 0
+        reward2 = 0
+        learningAgent_action = None
         if episodes_counter == EPISODES:
             break
         state = np.reshape(state, [1, state_size])
@@ -41,22 +44,36 @@ if __name__ == '__main__':
         #tmp_state = deepcopy(env.state)
         #state = env.state
         env.possible_actions = ReversiEnv.get_possible_actions(env.state, env.currently_playing_color)
-        learningAgent_action = learningAgent.get_action_to_make(state)
-        next_state, reward1, done, _ = env.step(learningAgent_action)
-        next_state = np.reshape(next_state, [1, state_size])
-        #state = np.reshape(state, [1, state_size])
-        #learningAgent.replay_buffer_save(state, learningAgent_action, reward1, next_state, done)
-        state = next_state
+        if len(env.possible_actions) != 0:
+            learningAgent_action = learningAgent.get_action_to_make(state)
+            next_state, reward1, done, _ = env.step(learningAgent_action)
+            next_state = np.reshape(next_state, [1, state_size])
+            #state = np.reshape(state, [1, state_size])
+            #learningAgent.replay_buffer_save(state, learningAgent_action, reward1, next_state, done)
+            state = next_state
+        else:
+            env.pass_place_counter += 1
+
+
         #env.render()
         env.currently_playing_color = opponentAgent.player_color
-        env.possible_actions = ReversiEnv.get_possible_actions(env.state, env.currently_playing_color)
-        opponentAgent_action = opponentAgent.get_action_to_make(state)
-        next_state, reward2, done, _ = env.step(opponentAgent_action)
-        next_state = np.reshape(next_state, [1, state_size])
 
-        reward = reward1 - reward2
-        learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
-        state = next_state
+        env.possible_actions = ReversiEnv.get_possible_actions(env.state, env.currently_playing_color)
+
+        if len(env.possible_actions) != 0:
+            opponentAgent_action = opponentAgent.get_action_to_make(state)
+            next_state, reward2, done, _ = env.step(opponentAgent_action)
+            next_state = np.reshape(next_state, [1, state_size])
+        else:
+            env.pass_place_counter +=1
+
+        if learningAgent_action is not None:
+            reward = reward1 - reward2
+            learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
+            state = next_state
+        if env.pass_place_counter > 1:
+            done = True
+
         #env.render()
         if len(learningAgent.memory) > BATCH_SIZE:
             learningAgent.replay(BATCH_SIZE)

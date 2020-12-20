@@ -224,7 +224,7 @@ class ReversiEnv(gym.Env):
 
     @staticmethod
     def pass_place(board_size, action):
-        return action == board_size ** 2 + 1
+        return ReversiEnv.possible_actions == 0 #action == board_size ** 2 + 1
 
     @staticmethod
     def get_possible_actions(board, player_color):
@@ -254,8 +254,8 @@ class ReversiEnv(gym.Env):
                             ny += dy
                         if(n > 0 and board[player_color, nx, ny] == 1):
                             actions.append(pos_x * d + pos_y)
-        if len(actions)==0:
-            actions = [d**2 + 1]
+        #if len(actions)==0:
+            #actions = [d**2 + 1]
         return actions
 
     @staticmethod
