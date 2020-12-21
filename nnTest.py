@@ -1,12 +1,12 @@
-from Reversi_combined import ReversiEnv
-from Agents.NNAgent import DDQNAgent
+from RL_othello_mgr.Reversi_combined import ReversiEnv
+from RL_othello_mgr.Agents.NNAgent import DDQNAgent
 from collections import deque
 import random
-from Agents.MinMaxAgent import MinMaxAgent
+from RL_othello_mgr.Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
 EPISODES = 1000
-BATCH_SIZE = 50
+BATCH_SIZE = 30
 outputFilePath = "TestSave/relu_activation_Adam_optimizer_flipped_as_reward.txt"
 import sys
 

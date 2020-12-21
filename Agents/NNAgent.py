@@ -10,14 +10,14 @@ from keras.optimizers import SGD
 from keras.layers import Softmax
 from copy import deepcopy
 import sys
-from Reversi_combined import ReversiEnv
+from RL_othello_mgr.Reversi_combined import ReversiEnv
 
 class DDQNAgent:
 
     def __init__(self, state_size, action_size, env, player_color):
         self.state_size = state_size
         self.action_size = action_size
-        self.memory = deque(maxlen=500)
+        self.memory = deque(maxlen=100)
         self.gamma = 0.9  # discount rate
         self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.05
@@ -36,7 +36,7 @@ class DDQNAgent:
         model.add(Dense(32, activation='relu'))
         model.add(Dense(self.action_size, activation='linear'))
         model.add(Dense(self.action_size, activation="softmax"))
-        model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
+        model.compile(loss='mse', optimizer=SGD(lr=self.learning_rate))
         # optimizer=Adam(lr=self.learning_rate))
         return model
 
