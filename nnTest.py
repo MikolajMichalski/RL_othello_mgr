@@ -1,5 +1,5 @@
-from RL_othello_mgr.Reversi_combined import ReversiEnv
-from RL_othello_mgr.Agents.NNAgent import DDQNAgent
+from Reversi_combined import ReversiEnv
+from Agents.NNAgent import DDQNAgent
 from collections import deque
 import random
 from RL_othello_mgr.Agents.MinMaxAgent import MinMaxAgent

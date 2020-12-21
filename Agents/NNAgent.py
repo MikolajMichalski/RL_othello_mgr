@@ -10,7 +10,7 @@ from keras.optimizers import SGD
 from keras.layers import Softmax
 from copy import deepcopy
 import sys
-from RL_othello_mgr.Reversi_combined import ReversiEnv
+from Reversi_combined import ReversiEnv
 
 class DDQNAgent:
 
