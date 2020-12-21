@@ -36,6 +36,7 @@ if __name__ == '__main__':
     while True:
         reward1 = 0
         reward2 = 0
+        state1 = None
         learningAgent_action = None
         if episodes_counter == EPISODES:
             break
@@ -50,7 +51,9 @@ if __name__ == '__main__':
             next_state = np.reshape(next_state, [1, state_size])
             #state = np.reshape(state, [1, state_size])
             #learningAgent.replay_buffer_save(state, learningAgent_action, reward1, next_state, done)
+            state1 = state
             state = next_state
+
         else:
             env.pass_place_counter += 1
 
@@ -65,11 +68,11 @@ if __name__ == '__main__':
             next_state, reward2, done, _ = env.step(opponentAgent_action)
             next_state = np.reshape(next_state, [1, state_size])
         else:
-            env.pass_place_counter +=1
+            env.pass_place_counter += 1
 
         if learningAgent_action is not None:
             reward = reward1 - reward2
-            learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
+            learningAgent.replay_buffer_save(state1, learningAgent_action, reward, next_state, done)
             state = next_state
         if env.pass_place_counter > 1:
             done = True
