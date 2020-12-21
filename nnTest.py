@@ -2,7 +2,7 @@ from Reversi_combined import ReversiEnv
 from Agents.NNAgent import DDQNAgent
 from collections import deque
 import random
-from RL_othello_mgr.Agents.MinMaxAgent import MinMaxAgent
+from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
 EPISODES = 1000
