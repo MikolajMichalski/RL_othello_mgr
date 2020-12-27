@@ -32,8 +32,15 @@ if __name__ == '__main__':
     last_hundred_win_precentage = 0
     state = env.reset()
     #state = env.reset()
-    env.render()
+    print(
+        f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {len(learningAgent.memory)}, gamma: {learningAgent.gamma}, \n"
+        f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
+    writeStdOutputToFile(outputFilePath, f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {len(learningAgent.memory)}, gamma: {learningAgent.gamma}, \n"
+        f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
+    #env.render()
+
     while True:
+
         reward1 = 0
         reward2 = 0
         state1 = None
