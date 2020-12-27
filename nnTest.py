@@ -94,28 +94,28 @@ if __name__ == '__main__':
                 learningAgent.target_model.save("TestSave/target_model_weights.h5")
 
                 print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
+                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
                                                                                     games_won, episodes_counter,
                                                                                     games_won / episodes_counter * 100,
-                                                                                    black_score, white_score, last_hundred_win_precentage))
-                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
+                                                                                    black_score, white_score, learningAgent.epsilon, last_hundred_win_precentage))
+                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
                     games_won, episodes_counter,
                     games_won / episodes_counter * 100,
-                    black_score, white_score, last_hundred_win_precentage))
+                    black_score, white_score, learningAgent.epsilon, last_hundred_win_precentage))
             else:
                 last_hundred_episodes_scores.append(0)
 
                 print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
+                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
                                                                                     games_won,
                                                                                     episodes_counter,
                                                                                     games_won / episodes_counter * 100,
-                                                                                    black_score, white_score, last_hundred_win_precentage))
+                                                                                    black_score, white_score, learningAgent.epsilon, last_hundred_win_precentage))
                 writeStdOutputToFile(outputFilePath,
-                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, last 100 games win precentage: {}".format(
+                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
                                         games_won, episodes_counter,
                                          games_won / episodes_counter * 100,
-                                         black_score, white_score, last_hundred_win_precentage))
+                                         black_score, white_score, learningAgent.epsilon, last_hundred_win_precentage))
 
             last_hundred_win_precentage = last_hundred_episodes_scores.count(1) / 100
             state = env.reset()
