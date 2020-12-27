@@ -17,10 +17,11 @@ class DDQNAgent:
     def __init__(self, state_size, action_size, env, player_color):
         self.state_size = state_size
         self.action_size = action_size
-        self.memory = deque(maxlen=100)
+        self.replay_buffer_size = 1000
+        self.memory = deque(maxlen=self.replay_buffer_size)
         self.gamma = 0.9  # discount rate
         self.epsilon = 1.0  # exploration rate
-        self.epsilon_min = 0.1
+        self.epsilon_min = 0.05
         self.epsilon_decay = 0.99
         self.learning_rate = 0.001
         self.model = self.initiate_model()
