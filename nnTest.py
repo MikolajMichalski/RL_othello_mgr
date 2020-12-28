@@ -6,7 +6,7 @@ from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
 EPISODES = 1000
-BATCH_SIZE = 200
+BATCH_SIZE = 50
 outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
 
@@ -33,9 +33,9 @@ if __name__ == '__main__':
     state = env.reset()
     #state = env.reset()
     print(
-        f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
+        f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {len(learningAgent.memory)}, gamma: {learningAgent.gamma}, \n"
         f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
-    writeStdOutputToFile(outputFilePath, f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
+    writeStdOutputToFile(outputFilePath, f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {len(learningAgent.memory)}, gamma: {learningAgent.gamma}, \n"
         f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
     #env.render()
 
