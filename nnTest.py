@@ -137,6 +137,7 @@ if __name__ == '__main__':
                     print("Syncing agents weights...")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     syncAgentsWeights(learningAgent, opponentAgent)
+                    opponentAgent.epsilon = 0
 
 
 
