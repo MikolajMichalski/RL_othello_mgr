@@ -99,10 +99,8 @@ if __name__ == '__main__':
             if black_score>white_score:
                 last_ten_episodes_scores.append(1)
                 games_won += 1
-                learningAgent.save("TestSave/model_weights.h5")
-                learningAgent.target_model.save("TestSave/target_model_weights.h5")
                 win_percentage_overall = games_won / episodes_counter * 100
-
+                last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
 
                 print(
                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
@@ -115,12 +113,14 @@ if __name__ == '__main__':
                     black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
                 if last_ten_win_percentage > best_win_percentage:
                     best_win_percentage = last_ten_win_percentage
+                    learningAgent.save("TestSave/model_weights.h5")
+                    learningAgent.target_model.save("TestSave/target_model_weights.h5")
                     print("Syncing agents weights...")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     syncAgentsWeights(learningAgent, opponentAgent)
             else:
                 last_ten_episodes_scores.append(0)
-
+                last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
                 print(
                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
                                                                                     games_won,
@@ -139,7 +139,7 @@ if __name__ == '__main__':
                     syncAgentsWeights(learningAgent, opponentAgent)
 
 
-            last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
+
             state = env.reset()
             #if episodes_counter % 10 == 0:
                  # print("Syncing agents weights...")
