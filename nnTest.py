@@ -6,7 +6,7 @@ from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
 EPISODES = 1000
-BATCH_SIZE = 30
+BATCH_SIZE = 40
 outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
 
