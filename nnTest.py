@@ -11,7 +11,7 @@ outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):
-    opponentAgent.target_model.set_weights(learningAgent.target_model.get_weights())
+    opponentAgent.model.set_weights(learningAgent.model.get_weights())
 
 def writeStdOutputToFile(filePath, text):
     original_std_out = sys.stdout
