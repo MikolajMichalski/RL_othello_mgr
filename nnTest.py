@@ -111,7 +111,7 @@ if __name__ == '__main__':
                     games_won, episodes_counter,
                     win_percentage_overall,
                     black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                if last_ten_win_percentage > best_win_percentage:
+                if last_ten_win_percentage >= best_win_percentage:
                     best_win_percentage = last_ten_win_percentage
                     learningAgent.save("TestSave/model_weights.h5")
                     learningAgent.target_model.save("TestSave/target_model_weights.h5")
@@ -132,7 +132,7 @@ if __name__ == '__main__':
                                         games_won, episodes_counter,
                                          win_percentage_overall,
                                          black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                if last_ten_win_percentage > best_win_percentage:
+                if last_ten_win_percentage >= best_win_percentage:
                     best_win_percentage = last_ten_win_percentage
                     print("Syncing agents weights...")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
