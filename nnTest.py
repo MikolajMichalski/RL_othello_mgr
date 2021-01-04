@@ -90,6 +90,7 @@ if __name__ == '__main__':
         if len(learningAgent.memory) > BATCH_SIZE:
             learningAgent.replay(BATCH_SIZE)
         if done:
+            learningAgent.sync_target_model()
             episodes_counter += 1
 
             #env.reset()
