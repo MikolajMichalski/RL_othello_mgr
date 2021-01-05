@@ -112,13 +112,15 @@ if __name__ == '__main__':
                     games_won, episodes_counter,
                     win_percentage_overall,
                     black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                if last_ten_win_percentage >= best_win_percentage:
+                if last_ten_win_percentage > best_win_percentage:
                     best_win_percentage = last_ten_win_percentage
                     learningAgent.save("TestSave/model_weights.h5")
                     learningAgent.target_model.save("TestSave/target_model_weights.h5")
                     print("Syncing agents weights...")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     syncAgentsWeights(learningAgent, opponentAgent)
+                    if best_win_percentage == 100:
+                        best_win_percentage = 0
             else:
                 last_ten_episodes_scores.append(0)
                 last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
@@ -133,12 +135,12 @@ if __name__ == '__main__':
                                         games_won, episodes_counter,
                                          win_percentage_overall,
                                          black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                if last_ten_win_percentage >= best_win_percentage:
-                    best_win_percentage = last_ten_win_percentage
-                    print("Syncing agents weights...")
-                    writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
-                    syncAgentsWeights(learningAgent, opponentAgent)
-                    opponentAgent.epsilon = 0
+                # if last_ten_win_percentage >= best_win_percentage:
+                #     best_win_percentage = last_ten_win_percentage
+                #     print("Syncing agents weights...")
+                #     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
+                #     syncAgentsWeights(learningAgent, opponentAgent)
+                #     opponentAgent.epsilon = 0
 
 
 
