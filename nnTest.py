@@ -22,7 +22,7 @@ def writeStdOutputToFile(filePath, text):
 
 if __name__ == '__main__':
     episodes_counter = 0
-    last_ten_episodes_scores = deque(maxlen=10)
+    won_in_row = 0 #deque(maxlen=10)
     env = ReversiEnv("random", "numpy3c", "lose", 8)
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
@@ -30,8 +30,8 @@ if __name__ == '__main__':
     opponentAgent = DDQNAgent(state_size, action_size, env, 1)
     games_won = 0
     win_percentage_overall = 0.
-    last_ten_win_percentage = 0.
-    best_win_percentage = 0.
+    #last_ten_win_percentage = 0.
+    best_won_in_row = 0.
     state = env.reset()
     #state = env.reset()
     print(
@@ -102,43 +102,44 @@ if __name__ == '__main__':
             white_score = len(np.where(env.state[1, :, :] == 1)[0])
 
             if black_score>white_score:
-                last_ten_episodes_scores.append(1)
+                won_in_row += 1 #.append(1)
                 games_won += 1
                 win_percentage_overall = games_won / episodes_counter * 100
-                last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
+                #last_ten_win_percentage = won_in_row.count(1) * 10
 
                 print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
+                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, games won in a row: {}".format(
                                                                                     games_won, episodes_counter,
                                                                                     games_won / episodes_counter * 100,
-                                                                                    black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
+                                                                                    black_score, white_score, learningAgent.epsilon, won_in_row))
+                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, games won in a row: {}".format(
                     games_won, episodes_counter,
                     win_percentage_overall,
-                    black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                if last_ten_win_percentage > best_win_percentage:
-                    best_win_percentage = last_ten_win_percentage
+                    black_score, white_score, learningAgent.epsilon, won_in_row))
+                if won_in_row > best_won_in_row:
+                    best_won_in_row = won_in_row
                     learningAgent.save("TestSave/model_weights.h5")
                     learningAgent.target_model.save("TestSave/target_model_weights.h5")
                     print("Syncing agents weights...")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     syncAgentsWeights(learningAgent, opponentAgent)
-                    if best_win_percentage == 100:
-                        best_win_percentage = 0
+                    #if best_won_in_row == 100:
+                     #   best_won_in_row = 0
             else:
-                last_ten_episodes_scores.append(0)
-                last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
+                won_in_row = 0
+                #won_in_row.append(0)
+                #last_ten_win_percentage = won_in_row.count(1) * 10
                 print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
+                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, games won in a row: {}".format(
                                                                                     games_won,
                                                                                     episodes_counter,
                                                                                     games_won / episodes_counter * 100,
-                                                                                    black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
+                                                                                    black_score, white_score, learningAgent.epsilon, won_in_row))
                 writeStdOutputToFile(outputFilePath,
-                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
+                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, games won in a row: {}".format(
                                         games_won, episodes_counter,
                                          win_percentage_overall,
-                                         black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
+                                         black_score, white_score, learningAgent.epsilon, won_in_row))
                 # if last_ten_win_percentage >= best_win_percentage:
                 #     best_win_percentage = last_ten_win_percentage
                 #     print("Syncing agents weights...")
