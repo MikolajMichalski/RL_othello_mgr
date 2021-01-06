@@ -1,0 +1,4 @@
+/TestSave/model_weights.h5
+/TestSave/target_model_weights.h5
+/TestSave/relu_activation_SGD_optimizer_score_as_reward.txt
+/TestSave/relu_activation_Adam_optimizer_flipped_as_reward.txt
