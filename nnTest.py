@@ -5,7 +5,7 @@ import random
 from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
-EPISODES = 1000
+EPISODES = 40000
 BATCH_SIZE = 40
 outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
@@ -87,9 +87,13 @@ if __name__ == '__main__':
             done = True
 
         #env.render()
-        if len(learningAgent.memory) > BATCH_SIZE:
-            learningAgent.replay(BATCH_SIZE)
+        #if len(learningAgent.memory) > BATCH_SIZE:
+            #learningAgent.replay(BATCH_SIZE)
         if done:
+
+            if len(learningAgent.memory) > BATCH_SIZE:
+                learningAgent.replay(BATCH_SIZE)
+
             learningAgent.sync_target_model()
             episodes_counter += 1
 
