@@ -116,7 +116,7 @@ if __name__ == '__main__':
                     games_won, episodes_counter,
                     win_percentage_overall,
                     black_score, white_score, learningAgent.epsilon, won_in_row))
-                if won_in_row > best_won_in_row:
+                if won_in_row >= best_won_in_row:
                     best_won_in_row = won_in_row
                     learningAgent.save("TestSave/model_weights.h5")
                     learningAgent.target_model.save("TestSave/target_model_weights.h5")
