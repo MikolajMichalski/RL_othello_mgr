@@ -129,7 +129,12 @@ class ReversiEnv(gym.Env):
 
                 current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
                 current_opponent_score = len(np.where(self.state[1-self.currently_playing_color, :, :] == 1)[0])
-                reward = current_player_score - current_opponent_score
+                #reward = current_player_score - current_opponent_score
+                if current_player_score > current_opponent_score:
+                    reward = 10.
+                else:
+                    reward = -10.
+
                 # white_score = len(np.where(self.state[1, :, :] == 1)[0])
 
                 current_player_score = 0
@@ -176,7 +181,12 @@ class ReversiEnv(gym.Env):
 
             current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
             current_opponent_score = len(np.where(self.state[1 - self.currently_playing_color, :, :] == 1)[0])
-            reward = current_player_score - current_opponent_score
+            #reward = current_player_score - current_opponent_score
+            if current_player_score > current_opponent_score:
+                reward = 10.
+            else:
+                reward = -10.
+
             return obs, reward, self.done, {'state': self.state}
         #self.render()
         return obs, reward, self.done, {'state': self.state}
