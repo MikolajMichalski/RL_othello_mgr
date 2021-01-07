@@ -94,7 +94,7 @@ if __name__ == '__main__':
             if len(learningAgent.memory) > BATCH_SIZE:
                 learningAgent.replay(BATCH_SIZE)
 
-            learningAgent.sync_target_model()
+
             episodes_counter += 1
 
             #env.reset()
@@ -102,6 +102,7 @@ if __name__ == '__main__':
             white_score = len(np.where(env.state[1, :, :] == 1)[0])
 
             if black_score>white_score:
+                learningAgent.sync_target_model()
                 won_in_row += 1 #.append(1)
                 games_won += 1
                 win_percentage_overall = games_won / episodes_counter * 100
