@@ -5,7 +5,7 @@ import random
 from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
-EPISODES = 1000
+EPISODES = 10000
 BATCH_SIZE = 40
 outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
@@ -112,7 +112,7 @@ if __name__ == '__main__':
                     games_won, episodes_counter,
                     win_percentage_overall,
                     black_score, white_score, learningAgent.epsilon, won_in_row))
-                if won_in_row > best_won_in_row:
+                if won_in_row >= best_won_in_row:
                     best_won_in_row = won_in_row
                     learningAgent.save("TestSave/model_weights.h5")
                     learningAgent.target_model.save("TestSave/target_model_weights.h5")
