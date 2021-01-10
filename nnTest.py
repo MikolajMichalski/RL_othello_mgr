@@ -33,7 +33,7 @@ def playTestGames(gamesNumber):
     games_won = 0
     test_win_percentage = 0.
     stateTest = envTest.reset()
-    test_episodes_counter = 1
+    test_episodes_counter = 0
     while True:
         agentAction  = None
         stateTest = np.reshape(stateTest, [1, state_size])
@@ -44,14 +44,14 @@ def playTestGames(gamesNumber):
             agentAction = agent.get_action_to_make(stateTest)
             next_state_test, reward1, done, _ = envTest.step(agentAction)
             next_state_test = np.reshape(next_state_test, [1, state_size])
-            envTest.render()
+            #envTest.render()
         #state = np.reshape(state, [1, state_size])
         #learningAgent.replay_buffer_save(state, learningAgent_action, reward1, next_state, done)
         #state1 = state
             stateTest = next_state_test
 
-        else:
-            pass
+        # else:
+        #     pass
         #    envTest.pass_place_counter += 1
 
         envTest.currently_playing_color = opponent.player_color
@@ -63,8 +63,8 @@ def playTestGames(gamesNumber):
             next_state_test, reward2, done, _ = envTest.step(opponentAgent_action)
             next_state_test = np.reshape(next_state_test, [1, state_size])
             #envTest.render()
-        else:
-            pass
+        # else:
+        #     pass
         #    envTest.pass_place_counter += 1
 
         stateTest = next_state_test
@@ -85,7 +85,7 @@ def playTestGames(gamesNumber):
                 #print(f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test} Test games win percentage: {test_games_win_percentage}")
                 writeStdOutputToFile(outputFilePath, f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}"
                                                      f" Test games win percentage: {test_games_win_percentage}")
-            #envTest.reset()
+            envTest.reset()
         if test_episodes_counter == gamesNumber:
             break
     return test_win_percentage
