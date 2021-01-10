@@ -50,9 +50,9 @@ def playTestGames(gamesNumber):
         #state1 = state
             stateTest = next_state_test
 
-        # else:
+        else:
         #     pass
-        #    envTest.pass_place_counter += 1
+            envTest.pass_place_counter += 1
 
         envTest.currently_playing_color = opponent.player_color
 
@@ -63,9 +63,9 @@ def playTestGames(gamesNumber):
             next_state_test, reward2, done, _ = envTest.step(opponentAgent_action)
             next_state_test = np.reshape(next_state_test, [1, state_size])
             #envTest.render()
-        # else:
+        else:
         #     pass
-        #    envTest.pass_place_counter += 1
+            envTest.pass_place_counter += 1
 
         stateTest = next_state_test
 
@@ -186,6 +186,7 @@ if __name__ == '__main__':
                     black_score, white_score, learningAgent.epsilon, won_in_row))
                 if won_in_row >= best_won_in_row:
                     best_won_in_row = won_in_row
+                    writeStdOutputToFile(outputFilePath, "Save weights!")
                     learningAgent.save("TestSave/model_weights.h5")
                     learningAgent.target_model.save("TestSave/target_model_weights.h5")
                     test_games_win_percentage = playTestGames(TEST_GAMES)
@@ -194,7 +195,7 @@ if __name__ == '__main__':
                         writeStdOutputToFile(outputFilePath, "Saving model weights!")
                         learningAgent.save("TestSave/model_weights_final.h5")
                         learningAgent.target_model.save("TestSave/target_model_weights_final.h5")
-
+                        break
                     #print("Syncing agents weights...")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     syncAgentsWeights(learningAgent, opponentAgent)
