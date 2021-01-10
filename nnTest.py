@@ -51,7 +51,7 @@ def playTestGames(gamesNumber):
             #envTest.render()
             envTest.pass_place_counter += 1
             if envTest.pass_place_counter > 1:
-                envTest.done = True
+                done = True
 
         envTest.currently_playing_color = opponent.player_color
 
@@ -67,7 +67,7 @@ def playTestGames(gamesNumber):
             #envTest.render()
             envTest.pass_place_counter += 1
             if envTest.pass_place_counter > 1:
-                envTest.done = True
+                done = True
 
         stateTest = next_state_test
 
