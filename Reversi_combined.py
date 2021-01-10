@@ -145,7 +145,6 @@ class ReversiEnv(gym.Env):
 
                 return obs, reward, self.done, {'state': self.state}
 
-            pass
         elif ReversiEnv.resign_place(self.board_size, action):
             obs = self.getCurrentObservations(self.state)
             return obs, -10., True, {'state': self.state}

@@ -35,8 +35,9 @@ class DDQNAgent:
         model = Sequential()
         model.add(Dense(64, input_dim=self.state_size, activation='relu'))
         model.add(Dense(32, activation='relu'))
-        model.add(Dense(self.action_size, activation='linear'))
-        model.add(Dense(self.action_size, activation="softmax"))
+        model.add(Dense(32, activation='relu'))
+        model.add(Dense(64, activation='linear'))
+        model.add(Dense(64, activation="softmax"))
         model.compile(loss='mse', optimizer=SGD(lr=self.learning_rate))
         # optimizer=Adam(lr=self.learning_rate))
         return model
