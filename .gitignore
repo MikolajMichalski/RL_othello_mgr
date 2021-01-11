@@ -4,3 +4,4 @@
 /TestSave/relu_activation_Adam_optimizer_flipped_as_reward.txt
 /TestSave/model_weights.h5
 /TestSave/model_weights.h5
+*.h5
