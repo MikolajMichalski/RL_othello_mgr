@@ -6,8 +6,8 @@ import random
 from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
-EPISODES = 10000
-BATCH_SIZE = 40
+EPISODES = 100000
+BATCH_SIZE = 100
 TEST_GAMES = 50
 outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
@@ -27,7 +27,7 @@ def writeStdOutputToFile(filePath, text):
 def playTestGames(gamesNumber):
     envTest = ReversiEnv("random", "numpy3c", "lose", 8)
     agent = DDQNAgent(state_size, action_size, envTest, 0)
-    agent.load("TestSave/target_model_weights.h5")
+    agent.load("TestSave/target_model_weights_trained.h5")
     agent.epsilon = 0
     opponent = RandomAgent(state_size, action_size, envTest, 1)
     games_won = 0
@@ -104,6 +104,7 @@ if __name__ == '__main__':
     win_percentage_overall = 0.
     best_won_in_row = 0.
     test_games_win_percentage = 0.
+    best_test_games_win_percentage = 0.
     state = env.reset()
 
     writeStdOutputToFile(outputFilePath, f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
@@ -154,12 +155,15 @@ if __name__ == '__main__':
         if env.pass_place_counter > 1:
             done = True
 
-        if len(learningAgent.memory) > BATCH_SIZE:
-            learningAgent.replay(BATCH_SIZE)
+
 
         if done:
-            learningAgent.sync_target_model()
             episodes_counter += 1
+
+            if len(learningAgent.memory) > BATCH_SIZE and episodes_counter > 50:
+                learningAgent.replay(BATCH_SIZE)
+
+            learningAgent.sync_target_model()
 
             black_score = len(np.where(env.state[0, :, :] == 1)[0])
             white_score = len(np.where(env.state[1, :, :] == 1)[0])
@@ -168,27 +172,14 @@ if __name__ == '__main__':
                 won_in_row += 1 #.append(1)
                 games_won += 1
                 win_percentage_overall = games_won / episodes_counter * 100
-
+                learningAgent.target_model.save(f"TestSave/target_model_weights_trained.h5")
 
 
                 writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, games won in a row: {}".format(
                     games_won, episodes_counter,
                     win_percentage_overall,
                     black_score, white_score, learningAgent.epsilon, won_in_row))
-                if won_in_row >= best_won_in_row:
-                    best_won_in_row = won_in_row
-                    writeStdOutputToFile(outputFilePath, "Save weights!")
-                    learningAgent.save("TestSave/model_weights.h5")
-                    learningAgent.target_model.save("TestSave/target_model_weights.h5")
-                    test_games_win_percentage = playTestGames(TEST_GAMES)
-                    if test_games_win_percentage > 70:
-                        writeStdOutputToFile(outputFilePath, "Saving model weights!")
-                        learningAgent.save("TestSave/model_weights_final.h5")
-                        learningAgent.target_model.save("TestSave/target_model_weights_final.h5")
-                        break
 
-                    writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
-                    syncAgentsWeights(learningAgent, opponentAgent)
 
             else:
                 won_in_row = 0
@@ -198,9 +189,23 @@ if __name__ == '__main__':
                                         games_won, episodes_counter,
                                          win_percentage_overall,
                                          black_score, white_score, learningAgent.epsilon, won_in_row))
-
-
-
+                
+            learningAgent.target_model.save(f"TestSave/target_model_weights_trained.h5")
+            if episodes_counter % 50 == 0:  # won_in_row >= best_won_in_row:
+                # best_won_in_row = won_in_row
+                writeStdOutputToFile(outputFilePath, "Evaluate model!")
+                # learningAgent.save("TestSave/model_weights.h5")
+                # learningAgent.target_model.save("TestSave/target_model_weights.h5")
+                test_games_win_percentage = playTestGames(TEST_GAMES)
+                if test_games_win_percentage > best_test_games_win_percentage:
+                    writeStdOutputToFile(outputFilePath, "Saving model weights!")
+                    learningAgent.save(f"TestSave/model_weights_{test_games_win_percentage}.h5")
+                    learningAgent.target_model.save(
+                        f"TestSave/target_model_weights_final_{test_games_win_percentage}.h5")
+                    writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
+                    syncAgentsWeights(learningAgent, opponentAgent)
+                    if best_test_games_win_percentage > 70:
+                        break
 
             state = env.reset()
 
