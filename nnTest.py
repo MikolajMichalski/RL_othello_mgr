@@ -78,15 +78,15 @@ def playTestGames(gamesNumber):
 
             if black_score_test > white_score_test:
                 games_won += 1
-                test_games_win_percentage = games_won / test_episodes_counter * 100
+                test_win_percentage = games_won / test_episodes_counter * 100
                 #print(f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test} Test games win percentage: {test_games_win_percentage}")
                 writeStdOutputToFile(outputFilePath, f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test} "
-                                                     f"Test games win percentage: {test_games_win_percentage}")
+                                                     f"Test games win percentage: {test_win_percentage}")
             else:
-                test_games_win_percentage = games_won / test_episodes_counter * 100
+                test_win_percentage = games_won / test_episodes_counter * 100
                 #print(f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test} Test games win percentage: {test_games_win_percentage}")
                 writeStdOutputToFile(outputFilePath, f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}"
-                                                     f" Test games win percentage: {test_games_win_percentage}")
+                                                     f" Test games win percentage: {test_win_percentage}")
             envTest.reset()
         if test_episodes_counter == gamesNumber:
             break
@@ -189,7 +189,7 @@ if __name__ == '__main__':
                                         games_won, episodes_counter,
                                          win_percentage_overall,
                                          black_score, white_score, learningAgent.epsilon, won_in_row))
-                
+
             learningAgent.target_model.save(f"TestSave/target_model_weights_trained.h5")
             if episodes_counter % 50 == 0:  # won_in_row >= best_won_in_row:
                 # best_won_in_row = won_in_row
