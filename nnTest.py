@@ -198,13 +198,14 @@ if __name__ == '__main__':
                 # learningAgent.target_model.save("TestSave/target_model_weights.h5")
                 test_games_win_percentage = playTestGames(TEST_GAMES)
                 if test_games_win_percentage > best_test_games_win_percentage:
+                    best_test_games_win_percentage = test_games_win_percentage
                     writeStdOutputToFile(outputFilePath, "Saving model weights!")
                     learningAgent.save(f"TestSave/model_weights_{test_games_win_percentage}.h5")
                     learningAgent.target_model.save(
                         f"TestSave/target_model_weights_final_{test_games_win_percentage}.h5")
                     writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     syncAgentsWeights(learningAgent, opponentAgent)
-                    if best_test_games_win_percentage > 70:
+                    if best_test_games_win_percentage > 80:
                         break
 
             state = env.reset()
