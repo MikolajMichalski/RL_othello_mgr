@@ -7,7 +7,7 @@ from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
 EPISODES = 100000
-BATCH_SIZE = 32
+BATCH_SIZE = 100
 TEST_GAMES = 50
 outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
 import sys
@@ -207,7 +207,7 @@ if __name__ == '__main__':
                                      f"games won in a row: {won_in_row}")
 
             learningAgent.target_model.save(f"TestSave/target_model_weights_trained.h5")
-            if episodes_counter % 50 == 0:  # won_in_row >= best_won_in_row:
+            if episodes_counter % 200 == 0:  # won_in_row >= best_won_in_row:
                 # best_won_in_row = won_in_row
                 writeStdOutputToFile(outputFilePath, "Evaluate model!")
                 # learningAgent.save("TestSave/model_weights.h5")
