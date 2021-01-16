@@ -1,6 +1,7 @@
 from Reversi_combined import ReversiEnv
 from Agents.NNAgent import DDQNAgent
 from Agents.RandomAgent import RandomAgent
+from Agents.nnAgentAdamOptim import DDQNAgentAdamOptim
 from collections import deque
 import random
 from Agents.MinMaxAgent import MinMaxAgent
@@ -107,7 +108,7 @@ if __name__ == '__main__':
     env = ReversiEnv("random", "numpy3c", "lose", 8)
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
-    learningAgent = DDQNAgent(state_size, action_size, env, 0)
+    learningAgent = DDQNAgentAdamOptim(state_size, action_size, env, 0)
     #opponentAgent = DDQNAgent(state_size, action_size, env, 1)
     games_won = 0
     win_percentage_overall = 0.
