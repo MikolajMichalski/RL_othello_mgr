@@ -36,8 +36,8 @@ def writeStdOutputToFile(filePath, text):
 
 def playTestGames(gamesNumber):
     envTest = ReversiEnv("random", "numpy3c", "lose", 8)
-    agent = DDQNAgent(state_size, action_size, envTest, 0)
-    agent.load("TestSave/target_model_weights_trained.h5")
+    agent = DDQNAgentAdamOptim(state_size, action_size, envTest, 0)
+    agent.load("TestSave/model_weights_trained.h5")
     agent.epsilon = 0
     opponent = RandomAgent(state_size, action_size, envTest, 1)
     games_won = 0
@@ -207,7 +207,7 @@ if __name__ == '__main__':
                                      f" last score - black/white:{black_score}/{white_score}, learning agent epsilon: {learningAgent.epsilon}, "
                                      f"games won in a row: {won_in_row}")
 
-            learningAgent.target_model.save(f"TestSave/target_model_weights_trained.h5")
+            learningAgent.model.save(f"TestSave/model_weights_trained.h5")
             if episodes_counter % 200 == 0:  # won_in_row >= best_won_in_row:
                 # best_won_in_row = won_in_row
                 writeStdOutputToFile(outputFilePath, "Evaluate model!")
