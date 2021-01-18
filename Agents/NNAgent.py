@@ -14,9 +14,8 @@ from Reversi_combined import ReversiEnv
 
 class DDQNAgent:
 
-    def __init__(self, state_size, action_size, env, player_color):
+    def __init__(self, state_size, env, player_color):
         self.state_size = state_size
-        self.action_size = action_size
         self.replay_buffer_size = 1500
         self.memory = deque(maxlen=self.replay_buffer_size)
         self.gamma = 0.9  # discount rate
