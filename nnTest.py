@@ -214,7 +214,7 @@ if __name__ == '__main__':
             learningAgent.replay_buffer_save(state, learningAgent_action, reward_done, next_state, done)
             #opponentAgent.replay_buffer_save(state, opponentAgent_action, reward_done * -1, next_state, done)
 
-            if len(learningAgent.memory) > BATCH_SIZE and episodes_counter > 50 and len(opponentAgent.memory) > BATCH_SIZE:
+            if len(learningAgent.memory) > BATCH_SIZE and episodes_counter > 50: # and len(opponentAgent.memory) > BATCH_SIZE:
                 learningAgent.replay(BATCH_SIZE)
                 opponentAgent.replay(BATCH_SIZE)
 
@@ -248,13 +248,13 @@ if __name__ == '__main__':
                                      f" games won in a row: {won_in_row}")
 
             learningAgent.model.save(f"TestSave/learning_agent_model_weights_trained.h5")
-            opponentAgent.model.save(f"TestSave/opponent_agent_model_weights_trained.h5")
+            #opponentAgent.model.save(f"TestSave/opponent_agent_model_weights_trained.h5")
 
             if episodes_counter % 50 == 0:  # won_in_row >= best_won_in_row:
                 # best_won_in_row = won_in_row
 
                 learningAgent.sync_target_model()
-                opponentAgent.sync_target_model()
+                #opponentAgent.sync_target_model()
 
                 writeStdOutputToFile(outputFilePath, "Evaluate model!")
 
@@ -266,13 +266,12 @@ if __name__ == '__main__':
                     learningAgent.save(f"TestSave/model_weights_{test_games_win_percentage}.h5")
                     learningAgent.target_model.save(
                         f"TestSave/target_model_weights_final_{test_games_win_percentage}.h5")
-                    opponentAgent.save(f"TestSave/opponent_model_weights_{test_games_win_percentage}.h5")
-                    opponentAgent.target_model.save(
-                        f"TestSave/opponent_target_model_weights_final_{test_games_win_percentage}.h5")
+                    #opponentAgent.save(f"TestSave/opponent_model_weights_{test_games_win_percentage}.h5")
+                    #opponentAgent.target_model.save(
+                     #   f"TestSave/opponent_target_model_weights_final_{test_games_win_percentage}.h5")
 
                     #writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     #syncAgentsWeights(learningAgent, opponentAgent)
-
                     if best_test_games_win_percentage > 80:
                         break
 
