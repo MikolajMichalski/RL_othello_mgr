@@ -216,7 +216,7 @@ if __name__ == '__main__':
 
             if len(learningAgent.memory) > BATCH_SIZE and episodes_counter > 50: # and len(opponentAgent.memory) > BATCH_SIZE:
                 learningAgent.replay(BATCH_SIZE)
-                opponentAgent.replay(BATCH_SIZE)
+                #opponentAgent.replay(BATCH_SIZE)
 
 
 
