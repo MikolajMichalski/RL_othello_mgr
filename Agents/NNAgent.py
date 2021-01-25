@@ -32,12 +32,12 @@ class DDQNAgent:
     def initiate_model(self):
         # Neural Net for Deep-Q learning Model
         model = Sequential()
-        model.add(Dense(64, input_dim=self.state_size, activation='relu'))
+        model.add(Dense(192, input_dim=192, activation='relu'))
         model.add(Dense(256, activation='relu'))
         model.add(Dense(256, activation='relu'))
-        model.add(Dense(64, activation='linear'))
+#        model.add(Dense(64, activation='linear'))
         model.add(Dense(64, activation="softmax"))
-        model.compile(loss='mse', optimizer=SGD(lr=self.learning_rate))
+        model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
         # optimizer=Adam(lr=self.learning_rate))
         return model
 

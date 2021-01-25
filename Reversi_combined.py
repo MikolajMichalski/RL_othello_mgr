@@ -397,18 +397,19 @@ class ReversiEnv(gym.Env):
 
     @staticmethod
     def getCurrentObservations(state):
-        obs = np.empty([state.shape[-1], state.shape[-1]])
-        for x in range(state.shape[-1]):
-            for y in range(state.shape[-1]):
-                if state[2, x, y] == 1:
-                    obs[x, y] = 0
-                else:
-                    if state[0, x, y] == 1:
-                        obs[x, y] = 1
-                    else:
-                        if state[1, x, y] == 1:
-                            obs[x, y] = -1
-        obs = np.concatenate(obs)
+        obs = np.empty([state.shape[-1] * 3, state.shape[-1] * 3])
+        # for x in range(state.shape[-1]):
+        #     for y in range(state.shape[-1]):
+        #         if state[2, x, y] == 1:
+        #             obs[x, y] = 0
+        #         else:
+        #             if state[0, x, y] == 1:
+        #                 obs[x, y] = 1
+        #             else:
+        #                 if state[1, x, y] == 1:
+        #                     obs[x, y] = -1
+        obs= np.concatenate(state, axis=None)
+        #obs = np.concatenate(obs)
         return obs
 
     def calculate_min_max_action(self, game_state, depth, maximizing_player):
