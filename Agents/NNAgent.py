@@ -4,7 +4,7 @@ import gym
 import numpy as np
 from collections import deque
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense, Input
 from keras.optimizers import Adam
 from keras.optimizers import SGD
 from keras.layers import Softmax
@@ -16,13 +16,13 @@ class DDQNAgent:
 
     def __init__(self, state_size, env, player_color):
         self.state_size = state_size
-        self.replay_buffer_size = 1500
+        self.replay_buffer_size = 15000
         self.memory = deque(maxlen=self.replay_buffer_size)
         self.gamma = 0.9  # discount rate
         self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.1
-        self.epsilon_decay = 0.99
-        self.learning_rate = 0.0001
+        self.epsilon_decay = 0.995
+        self.learning_rate = 0.001
         self.model = self.initiate_model()
         self.target_model = self.initiate_model()
         self.env = env
@@ -32,11 +32,12 @@ class DDQNAgent:
     def initiate_model(self):
         # Neural Net for Deep-Q learning Model
         model = Sequential()
-        model.add(Dense(192, input_dim=192, activation='relu'))
-        model.add(Dense(256, activation='relu'))
-        model.add(Dense(256, activation='relu'))
+        model.add(Dense(256, input_dim=192, activation='relu', kernel_initializer='normal'))
+        #model.add(Dense(256, activation='relu', kernel_initializer='normal'))
+        #model.add(Dense(256, activation='relu', kernel_initializer='normal'))
+        #model.add(Dense(256, activation='relu'))
 #        model.add(Dense(64, activation='linear'))
-        model.add(Dense(64, activation="softmax"))
+        model.add(Dense(64, activation="softmax", kernel_initializer='normal'))
         model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
         # optimizer=Adam(lr=self.learning_rate))
         return model

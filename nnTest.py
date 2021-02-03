@@ -8,9 +8,9 @@ from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
 EPISODES = 100000
-BATCH_SIZE = 100
-TEST_GAMES = 50
-outputFilePath = "TestSave/relu_activation_SGD_optimizer_score_as_reward.txt"
+BATCH_SIZE = 32
+TEST_GAMES = 100
+outputFilePath = "TestSave/testOutput_80percentWin_SGD_2Dense_Batch_32.txt"
 import sys
 #
 # def inverseState(stateToInverse):
@@ -114,7 +114,7 @@ def playTestGames(gamesNumber):
                                                      f"Test games won: {games_won} "
                                                      f"Test games lost: {test_episodes_counter - games_won}")
 
-            envTest.reset()
+            stateTest = envTest.reset()
         if test_episodes_counter == gamesNumber:
             break
     return test_win_percentage
@@ -153,8 +153,8 @@ if __name__ == '__main__':
         learningAgent_action = None
         opponentAgent_action = None
 
-        if episodes_counter == EPISODES:
-            break
+        #if episodes_counter == EPISODES:
+         #   break
 
         state = np.reshape(state, [1, state_size])
         env.currently_playing_color = learningAgent.player_color
@@ -259,7 +259,7 @@ if __name__ == '__main__':
                 writeStdOutputToFile(outputFilePath, "Evaluate model!")
 
                 test_games_win_percentage = playTestGames(TEST_GAMES)
-                if test_games_win_percentage > best_test_games_win_percentage:
+                if test_games_win_percentage >= best_test_games_win_percentage:
                     best_test_games_win_percentage = test_games_win_percentage
                     #learningAgent.sync_target_model()
                     writeStdOutputToFile(outputFilePath, "Saving model weights!")
@@ -272,7 +272,7 @@ if __name__ == '__main__':
 
                     #writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
                     #syncAgentsWeights(learningAgent, opponentAgent)
-                    if best_test_games_win_percentage > 80:
+                    if best_test_games_win_percentage > 90:
                         break
 
             state = env.reset()
