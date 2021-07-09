@@ -49,8 +49,7 @@ class MinMaxAgent:
 
 
     def best_action(self, game_state):
-        import operator
-        import itertools
+
         best_score = -9999
         tmp_state = game_state
         possible_actions_tmp = deepcopy(ReversiEnv.get_possible_actions(tmp_state, self.player_color))
@@ -69,5 +68,7 @@ class MinMaxAgent:
             action_score_dict_sorted = sorted(action_score_dict.items(), key=lambda kv: kv[1])
             k_best_actions = action_score_dict_sorted[-2::]
             selected_action = k_best_actions[random.randint(0, len(k_best_actions)-1)][0]
-            b_action = selected_action #k_best_actions[random.randint(0, len(k_best_actions))][0]
+            b_action = selected_action
         return b_action
+
+

@@ -12,25 +12,7 @@ BATCH_SIZE = 32
 TEST_GAMES = 100
 outputFilePath = "TestSave/testOutput_80percentWin_SGD_2Dense_Batch_32.txt"
 import sys
-#
-# def inverseState(stateToInverse):
-#     stateInversed = np.zeros(shape= stateToInverse.shape)
-#     stateInversed[0] = stateToInverse[1]
-#     stateInversed[1] = stateToInverse[0]
-#     stateInversed[2] = stateToInverse[2]
-#
-#     return stateInversed
 
-# def inverseObs(obsToInverse):
-#     obsInversed = np.zeros(shape=obsToInverse.shape)
-#     for element in np.ndenumerate(obsToInverse):
-#         if element[1] == -1:
-#             obsInversed[element[0]] = 1
-#         elif element[1] == 1:
-#             obsInversed[element[0]] = -1
-#         elif element[1] == 0:
-#             obsInversed[element[0]] = 0
-#     return obsInversed
 
 
 
@@ -70,7 +52,6 @@ def playTestGames(gamesNumber):
 
         else:
 
-            #envTest.render()
             envTest.pass_place_counter += 1
 
         if envTest.pass_place_counter > 1:
@@ -84,9 +65,8 @@ def playTestGames(gamesNumber):
             opponentAgent_action = opponent.get_action_to_make(stateTest)
             next_state_test, reward2, done, _ = envTest.step(opponentAgent_action)
             next_state_test = np.reshape(next_state_test, [1, state_size])
-            #envTest.render()
+
         else:
-            #envTest.render()
             envTest.pass_place_counter += 1
 
         if envTest.pass_place_counter > 1:
@@ -127,15 +107,13 @@ def playTestGames(gamesNumber):
 
 if __name__ == '__main__':
     episodes_counter = 0
-    won_in_row = 0 #deque(maxlen=10)
     env = ReversiEnv("random", "numpy3c", "lose", 8)
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
     learningAgent = DDQNAgent(state_size, env, 0)
-    opponentAgent = RandomAgent(state_size, action_size, env, 1) #DDQNAgent(state_size, env, 1)
+    opponentAgent = RandomAgent(state_size, action_size, env, 1)
     games_won = 0
     win_percentage_overall = 0.
-    best_won_in_row = 0.
     test_games_win_percentage = 0.
     best_test_games_win_percentage = 0.
     state = env.reset()
@@ -146,15 +124,11 @@ if __name__ == '__main__':
                                          f"epsilon min: {learningAgent.epsilon_min},"
                                          f" epsilon decay: {learningAgent.epsilon_decay}, "
                                          f"batch size: {BATCH_SIZE}")
-    #env.render()
 
     while True:
 
         learningAgent_action = None
         opponentAgent_action = None
-
-        #if episodes_counter == EPISODES:
-         #   break
 
         state = np.reshape(state, [1, state_size])
         env.currently_playing_color = learningAgent.player_color
@@ -168,7 +142,6 @@ if __name__ == '__main__':
             if done != True:
                 learningAgent.replay_buffer_save(state, learningAgent_action, reward, next_state, done)
 
-            #state1 = state
             state = next_state
 
         else:
@@ -178,23 +151,17 @@ if __name__ == '__main__':
         env.currently_playing_color = opponentAgent.player_color
 
         env.possible_actions = ReversiEnv.get_possible_actions(env.state, 1)
-        #negativeObs = np.reshape(negativeObs, [1, state_size])
+
         if len(env.possible_actions) != 0:
             opponentAgent_action = opponentAgent.get_action_to_make(state)
             next_state, reward, done, _ = env.step(opponentAgent_action)
 
             next_state = np.reshape(next_state, [1, state_size])
 
-            #if done != True:
-                #opponentAgent.replay_buffer_save(state, opponentAgent_action, reward, next_state, done)
-
             state = next_state
 
         else:
             env.pass_place_counter += 1
-
-        #env.render()
-
 
         if env.pass_place_counter > 1:
             done = True
@@ -212,16 +179,13 @@ if __name__ == '__main__':
             else:
                 reward_done = -10.
             learningAgent.replay_buffer_save(state, learningAgent_action, reward_done, next_state, done)
-            #opponentAgent.replay_buffer_save(state, opponentAgent_action, reward_done * -1, next_state, done)
 
-            if len(learningAgent.memory) > BATCH_SIZE and episodes_counter > 50: # and len(opponentAgent.memory) > BATCH_SIZE:
+            if len(learningAgent.memory) > BATCH_SIZE and episodes_counter > 50:
                 learningAgent.replay(BATCH_SIZE)
-                #opponentAgent.replay(BATCH_SIZE)
 
 
 
             if black_score > white_score:
-                won_in_row += 1
                 games_won += 1
                 win_percentage_overall = games_won / episodes_counter * 100
 
@@ -232,8 +196,7 @@ if __name__ == '__main__':
                                      f"Games won/total: {games_won}/{episodes_counter},"
                                      f" win %: {win_percentage_overall:.4}%,"
                                      f" last score - black/white:{black_score}/{white_score},"
-                                     f" learning agent epsilon: {learningAgent.epsilon},"
-                                     f" games won in a row: {won_in_row}")
+                                     f" learning agent epsilon: {learningAgent.epsilon},")
 
 
             else:
@@ -244,17 +207,14 @@ if __name__ == '__main__':
                                      f"Games won/total: {games_won}/{episodes_counter},"
                                      f" win %: {win_percentage_overall:.4}%,"
                                      f" last score - black/white:{black_score}/{white_score},"
-                                     f" learning agent epsilon: {learningAgent.epsilon},"
-                                     f" games won in a row: {won_in_row}")
+                                     f" learning agent epsilon: {learningAgent.epsilon},")
 
             learningAgent.model.save(f"TestSave/learning_agent_model_weights_trained.h5")
-            #opponentAgent.model.save(f"TestSave/opponent_agent_model_weights_trained.h5")
 
-            if episodes_counter % 50 == 0:  # won_in_row >= best_won_in_row:
-                # best_won_in_row = won_in_row
+
+            if episodes_counter % 50 == 0:
 
                 learningAgent.sync_target_model()
-                #opponentAgent.sync_target_model()
 
                 writeStdOutputToFile(outputFilePath, "Evaluate model!")
 
@@ -266,13 +226,8 @@ if __name__ == '__main__':
                     learningAgent.save(f"TestSave/model_weights_{test_games_win_percentage}.h5")
                     learningAgent.target_model.save(
                         f"TestSave/target_model_weights_final_{test_games_win_percentage}.h5")
-                    #opponentAgent.save(f"TestSave/opponent_model_weights_{test_games_win_percentage}.h5")
-                    #opponentAgent.target_model.save(
-                     #   f"TestSave/opponent_target_model_weights_final_{test_games_win_percentage}.h5")
 
-                    #writeStdOutputToFile(outputFilePath, "Syncing agents weights...")
-                    #syncAgentsWeights(learningAgent, opponentAgent)
-                    if best_test_games_win_percentage > 90:
+                    if best_test_games_win_percentage > 80:
                         break
 
             state = env.reset()

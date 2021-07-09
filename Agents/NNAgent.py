@@ -30,16 +30,13 @@ class DDQNAgent:
         self.player_color = player_color
 
     def initiate_model(self):
-        # Neural Net for Deep-Q learning Model
         model = Sequential()
         model.add(Dense(256, input_dim=192, activation='relu', kernel_initializer='normal'))
-        #model.add(Dense(256, activation='relu', kernel_initializer='normal'))
-        #model.add(Dense(256, activation='relu', kernel_initializer='normal'))
-        #model.add(Dense(256, activation='relu'))
-#        model.add(Dense(64, activation='linear'))
+        model.add(Dense(256, activation='relu', kernel_initializer='normal'))
+        model.add(Dense(256, activation='relu', kernel_initializer='normal'))
+        model.add(Dense(256, activation='relu', kernel_initializer='normal'))
         model.add(Dense(64, activation="softmax", kernel_initializer='normal'))
         model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
-        # optimizer=Adam(lr=self.learning_rate))
         return model
 
     def replay_buffer_save(self, state, action, reward, next_state, done):
@@ -47,9 +44,7 @@ class DDQNAgent:
 
     def get_action_to_make(self, state):
         if np.random.rand() <= self.epsilon:
-            #return random.randrange(64)
             return random.choice(self.env.possible_actions)
-            #return random.choice(range(env.action_space.n))
         act_values = self.model.predict(state)
         possible_act_values = np.zeros((1, len(act_values[0])), float)
         for index in range(len(act_values[0])):
@@ -66,7 +61,6 @@ class DDQNAgent:
                 target[0][action] = reward
             else:
                 t = self.target_model.predict(next_state)[0]
-                #t = self.model.predict(next_state)[0]
                 target[0][action] = reward + self.gamma * np.amax(t)
             self.model.fit(state, target, epochs=1, verbose=0)
         if self.epsilon > self.epsilon_min:

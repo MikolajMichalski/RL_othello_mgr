@@ -1,6 +1,7 @@
 from Reversi_combined import ReversiEnv
 from Agents.NNAgent import DDQNAgent
 from Agents.RandomAgent import RandomAgent
+from Agents.HumanAgent import HumanAgent
 from collections import deque
 import random
 from Agents.MinMaxAgent import MinMaxAgent
@@ -8,7 +9,7 @@ from copy import deepcopy
 import numpy as np
 EPISODES = 100
 BATCH_SIZE = 30
-outputFilePath = "TestSave/Test_against_random.txt"
+outputFilePath = "TestSave/Test_weights83.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):
@@ -30,20 +31,22 @@ if __name__ == '__main__':
     learningAgent = DDQNAgent(state_size, env, 0)
     learningAgent.epsilon = 0.
     learningAgent.load("TestSave/target_model_weights_final_83.0.h5")
-    opponentAgent = RandomAgent(state_size, action_size, env, 1)
+    opponentAgent = HumanAgent(state_size, action_size, env, 1)
     games_won = 0
     win_percentage_overall = 0.
     last_ten_win_percentage = 0.
     best_win_percentage = 0.
     state = env.reset()
 
-    print(f"EXECUTING {EPISODES} TEST GAMES AGAINST {opponentAgent.__class__.__name__}.")
-    if opponentAgent is MinMaxAgent:
-        print(f"MinMax depth is {opponentAgent.max_depth}")
+    print(
+        f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
+        f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
+    writeStdOutputToFile(outputFilePath, f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
+        f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
 
 
     while True:
-
+        env.render()
         reward1 = 0
         reward2 = 0
         state1 = None

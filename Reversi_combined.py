@@ -31,8 +31,6 @@ class ReversiEnv(gym.Env):
     BLACK = 0
     WHITE = 1
     metadata = {"render.modes": ["ansi","human"]}
-    MINMAX_DEPTH = 2
-    OPPONENT_POLICY_TYPE = 'minmax'
 
     def __init__(self, opponent, observation_type, illegal_place_mode, board_size):
         """
@@ -52,10 +50,7 @@ class ReversiEnv(gym.Env):
         }
 
         self.currently_playing_color = 0
-        # try:
-        #     self.player_color = colormap[player_color]
-        # except KeyError:
-        #     raise error.Error("player_color must be 'black' or 'white', not {}".format(player_color))
+
         self.pass_place_counter = 0
         self.opponent = opponent
 
@@ -68,7 +63,6 @@ class ReversiEnv(gym.Env):
         if self.observation_type != 'numpy3c':
             raise error.Error('Unsupported observation type: {}'.format(self.observation_type))
 
-        # One action for each board position and resign and pass
         self.action_space = spaces.Discrete(self.board_size ** 2 + 2)
         observation = self.reset()
         self.observation_space = spaces.Box(np.zeros(observation.shape), np.ones(observation.shape))
@@ -78,7 +72,6 @@ class ReversiEnv(gym.Env):
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
 
-        # Update the random policy if needed
         if isinstance(self.opponent, str):
             if self.opponent == 'random':
                 self.opponent_policy = make_random_policy(self.np_random)
@@ -90,7 +83,6 @@ class ReversiEnv(gym.Env):
         return [seed]
 
     def reset(self):
-        # init board setting
         self.state = np.zeros((3, self.board_size, self.board_size))
         centerL = int(self.board_size/2-1)
         centerR = int(self.board_size/2)
@@ -105,21 +97,14 @@ class ReversiEnv(gym.Env):
         self.done = False
         self.pass_place_counter = 0
 
-        # # Let the opponent play if it's not the agent's turn
-        # if self.player_color != self.to_play:
-        #     a = self.opponent_policy(self.state)
-        #     ReversiEnv.make_place(self.state, a, ReversiEnv.BLACK)
-        #     self.to_play = ReversiEnv.WHITE
-
         obs = self.getCurrentObservations(self.state)
         return obs
 
     def step(self, action):
-        #initial_current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
         if self.done:
             obs = self.getCurrentObservations(self.state)
             return obs, 0., True, {'state': self.state}
-        if len(self.possible_actions) == 0:#ReversiEnv.pass_place(self.board_size, action):
+        if len(self.possible_actions) == 0:
             self.pass_place_counter += 1
             if self.pass_place_counter <= 1:
                 pass
@@ -129,19 +114,11 @@ class ReversiEnv(gym.Env):
 
                 black_player_score = len(np.where(self.state[0, :, :] == 1)[0])
                 white_opponent_score = len(np.where(self.state[1, :, :] == 1)[0])
-                #reward = current_player_score - current_opponent_score
+
                 if black_player_score > white_opponent_score:
                     reward = 10.
                 else:
                     reward = -10.
-
-                # white_score = len(np.where(self.state[1, :, :] == 1)[0])
-
-                current_player_score = 0
-                # if black_score > white_score:  # score >= 32:
-                #     reward = black_score - white_score
-                # else:
-                # reward = black_score - white_score
 
                 return obs, reward, self.done, {'state': self.state}
 
@@ -152,10 +129,9 @@ class ReversiEnv(gym.Env):
             if self.illegal_place_mode == 'raise':
                 raise
             elif self.illegal_place_mode == 'lose':
-                # Automatic loss on illegal place
+
                 self.done = True
                 obs = self.getCurrentObservations(self.state)
-                #return self.state, -1., True, {'state': self.state}
                 return obs, -10., True, {'state': self.state}
             else:
                 raise error.Error('Unsupported illegal place action: {}'.format(self.illegal_place_mode))
@@ -163,41 +139,25 @@ class ReversiEnv(gym.Env):
             ReversiEnv.make_place(self.state, action, self.currently_playing_color)
 
         reward = 0
-        #current_player_score = len(np.where(self.state[self.currently_playing_color, :, :] == 1)[0])
-        #reward = initial_current_player_score - current_player_score
+
 
         obs = self.getCurrentObservations(self.state)
 
         self.done = self.isFinished(self.state)
 
         if self.done:
-            # black_score = len(np.where(self.state[0, :, :] == 1)[0])
-            # white_score = len(np.where(self.state[1, :, :] == 1)[0])
-            # if black_score > white_score:  # score >= 32:
-            #     reward = black_score - white_score
-            # else:
-            #reward = black_score - white_score
 
             black_player_score = len(np.where(self.state[0, :, :] == 1)[0])
             white_opponent_score = len(np.where(self.state[1, :, :] == 1)[0])
-            #reward = current_player_score - current_opponent_score
+
             if black_player_score > white_opponent_score:
                 reward = 10.
             else:
                 reward = -10.
 
             return obs, reward, self.done, {'state': self.state}
-        #self.render()
+
         return obs, reward, self.done, {'state': self.state}
-
-
-    def GetCurrentScore(self, state, current_reward):
-        #reward = 0
-        for x in range(self.state.shape[2]):
-            for y in range(self.state.shape[2]):
-                if self.state[0, x, y] == 1:
-                    current_reward += 1
-        return current_reward
 
     def render(self, mode='human',  close=False):
         if close:
@@ -237,7 +197,7 @@ class ReversiEnv(gym.Env):
 
     @staticmethod
     def pass_place(board_size, action):
-        return len(ReversiEnv.possible_actions) == 0 #action == board_size ** 2 + 1
+        return len(ReversiEnv.possible_actions) == 0
 
     @staticmethod
     def get_possible_actions(board, player_color):
@@ -267,8 +227,6 @@ class ReversiEnv(gym.Env):
                             ny += dy
                         if(n > 0 and board[player_color, nx, ny] == 1):
                             actions.append(pos_x * d + pos_y)
-        #if len(actions)==0:
-            #actions = [d**2 + 1]
         return actions
 
     @staticmethod
@@ -304,9 +262,7 @@ class ReversiEnv(gym.Env):
     @staticmethod
     def valid_place(board, action, player_color):
         coords = ReversiEnv.action_to_coordinate(board, action)
-        # check whether there is any empty places
         if board[2, coords[0], coords[1]] == 1:
-            # check whether there is any reversible places
             if ReversiEnv.valid_reverse_opponent(board, coords, player_color):
                 return True
             else:
@@ -362,32 +318,6 @@ class ReversiEnv(gym.Env):
     def action_to_coordinate(board, action):
         return action // board.shape[-1], action % board.shape[-1]
 
-    # @staticmethod
-    # def game_finished(board):
-    #     # Returns 1 if player 1 wins, -1 if player 2 wins and 0 otherwise
-    #     d = board.shape[-1]
-    #
-    #     player_score_x, player_score_y = np.where(board[0, :, :] == 1)
-    #     player_score = len(player_score_x)
-    #     opponent_score_x, opponent_score_y = np.where(board[1, :, :] == 1)
-    #     opponent_score = len(opponent_score_x)
-    #     if player_score == 0:
-    #         return -5
-    #     elif opponent_score == 0:
-    #         return 5
-    #     else:
-    #         free_x, free_y = np.where(board[2, :, :] == 1)
-    #         if free_x.size == 0:
-    #             if player_score > (d**2)/2:
-    #                 return 5
-    #             elif player_score == (d**2)/2:
-    #                 return 5
-    #             else:
-    #                 return -5
-    #         else:
-    #             return 0
-    #     return 0
-
     def isFinished(self, board):
         for x in range(board.shape[-1]):
             for y in range(board.shape[-1]):
@@ -398,82 +328,9 @@ class ReversiEnv(gym.Env):
     @staticmethod
     def getCurrentObservations(state):
         obs = np.empty([state.shape[-1] * 3, state.shape[-1] * 3])
-        # for x in range(state.shape[-1]):
-        #     for y in range(state.shape[-1]):
-        #         if state[2, x, y] == 1:
-        #             obs[x, y] = 0
-        #         else:
-        #             if state[0, x, y] == 1:
-        #                 obs[x, y] = 1
-        #             else:
-        #                 if state[1, x, y] == 1:
-        #                     obs[x, y] = -1
         obs= np.concatenate(state, axis=None)
-        #obs = np.concatenate(obs)
         return obs
 
-    def calculate_min_max_action(self, game_state, depth, maximizing_player):
-        tmp_state = deepcopy(game_state)
-
-        if maximizing_player:
-            current_player_color = 1
-        else:
-            current_player_color = 0
-        possible_actions_tmp = self.get_possible_actions(tmp_state, current_player_color)
-
-        if depth == self.MINMAX_DEPTH or (len(possible_actions_tmp)==1 and any(possible_actions_tmp) > 64):
-            tmp_obs = self.getCurrentObservations(tmp_state)
-            score = sum(1 for i in self.getCurrentObservations(tmp_state) if i==-1)
-            return score
-
-        if maximizing_player:
-            best_score = -9999
-            possible_actions_tmp = self.get_possible_actions(tmp_state, current_player_color)
-            for action in possible_actions_tmp:
-                tmp_state1 = deepcopy(tmp_state)
-                if action != 65:
-                    tmp_state = ReversiEnv.make_place(tmp_state, action, 1)
-                score = self.calculate_min_max_action(tmp_state, depth + 1, False)
-                tmp_state = tmp_state1
-                best_score = max(score, best_score)
-            return best_score
-        else:
-            best_score = 9999
-            possible_actions_tmp = self.get_possible_actions(tmp_state, current_player_color)
-            for action in possible_actions_tmp:
-                tmp_state1 = deepcopy(tmp_state)
-                if action != 65:
-                    tmp_state = ReversiEnv.make_place(tmp_state, action, 0)
-                score = self.calculate_min_max_action(tmp_state, depth+1, True)
-                tmp_state = tmp_state1
-                best_score = min(score, best_score)
-
-            return best_score
-
-
-
-    def best_action(self, game_state):
-        import operator
-        import itertools
-        best_score = -9999
-        tmp_state = game_state
-        possible_actions_tmp = deepcopy(ReversiEnv.get_possible_actions(tmp_state, 1))
-        action_score_dict = dict()
-        for action in possible_actions_tmp:
-            tmp_state1 = deepcopy(tmp_state)
-            if action != 65:
-                tmp_state = ReversiEnv.make_place(tmp_state, action, 1)
-
-            score = self.calculate_min_max_action(tmp_state, 0, False)
-            tmp_state = tmp_state1
-            action_score_dict.update({action : score})
-            if score > best_score:
-                best_score = score
-                b_action = action
-            action_score_dict_sorted = sorted(action_score_dict.items(), key=lambda kv: kv[1])
-            k_best_actions = action_score_dict_sorted[-2::]
-            b_action = k_best_actions[self.np_random.randint(len(k_best_actions))][0]
-        return b_action
 
 
 

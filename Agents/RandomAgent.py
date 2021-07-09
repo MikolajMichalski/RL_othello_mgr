@@ -26,6 +26,7 @@ class RandomAgent:
         self.learning_rate = 0.005
         self.env = env
         self.player_color = player_color
+        self.agent_type = "random"
 
     def get_action_to_make(self, state):
             return random.choice(self.env.possible_actions)
