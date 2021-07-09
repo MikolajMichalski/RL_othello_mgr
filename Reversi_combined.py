@@ -196,10 +196,6 @@ class ReversiEnv(gym.Env):
         return action == board_size ** 2
 
     @staticmethod
-    def pass_place(board_size, action):
-        return len(ReversiEnv.possible_actions) == 0
-
-    @staticmethod
     def get_possible_actions(board, player_color):
         actions=[]
         d = board.shape[-1]

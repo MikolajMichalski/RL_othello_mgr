@@ -200,7 +200,6 @@ if __name__ == '__main__':
 
 
             else:
-                won_in_row = 0
 
                 win_percentage_overall = games_won / episodes_counter * 100
                 writeStdOutputToFile(outputFilePath,
