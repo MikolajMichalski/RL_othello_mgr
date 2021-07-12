@@ -10,7 +10,7 @@ import numpy as np
 EPISODES = 100000
 BATCH_SIZE = 32
 TEST_GAMES = 100
-outputFilePath = "TestSave/testOutput_80percentWin_SGD_2Dense_Batch_32.txt"
+outputFilePath = "Output/training_output.txt"
 import sys
 
 
@@ -31,7 +31,7 @@ def writeStdOutputToFile(filePath, text):
 def playTestGames(gamesNumber):
     envTest = ReversiEnv("random", "numpy3c", "lose", 8)
     agent = DDQNAgent(state_size, envTest, 0)
-    agent.load("Save/learning_agent_model_weights_trained.h5")
+    agent.load("save/learning_agent_model_weights_trained.h5")
     agent.epsilon = 0
     opponent = RandomAgent(state_size, action_size, envTest, 1)
     games_won = 0
@@ -208,7 +208,7 @@ if __name__ == '__main__':
                                      f" last score - black/white:{black_score}/{white_score},"
                                      f" learning agent epsilon: {learningAgent.epsilon},")
 
-            learningAgent.model.save(f"TestSave/learning_agent_model_weights_trained.h5")
+            learningAgent.model.save(f"save/learning_agent_model_weights_trained.h5")
 
 
             if episodes_counter % 50 == 0:
@@ -221,9 +221,9 @@ if __name__ == '__main__':
                 if test_games_win_percentage >= best_test_games_win_percentage:
                     best_test_games_win_percentage = test_games_win_percentage
                     writeStdOutputToFile(outputFilePath, "Saving model weights!")
-                    learningAgent.save(f"TestSave/model_weights_{test_games_win_percentage}.h5")
+                    learningAgent.save(f"save/model_weights_{test_games_win_percentage}.h5")
                     learningAgent.target_model.save(
-                        f"TestSave/target_model_weights_final_{test_games_win_percentage}.h5")
+                        f"save/target_model_weights_final_{test_games_win_percentage}.h5")
 
                     if best_test_games_win_percentage > 80:
                         break
