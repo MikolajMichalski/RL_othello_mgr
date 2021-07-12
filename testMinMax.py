@@ -6,7 +6,7 @@ import random
 from Agents.MinMaxAgent import MinMaxAgent
 from copy import deepcopy
 import numpy as np
-EPISODES = 1000
+EPISODES = 100
 BATCH_SIZE = 30
 outputFilePath = "Output/MinMax_Play.txt"
 import sys
