@@ -1,4 +1,4 @@
-from RL_othello_mgr import Test, testMinMax, Testhuman
+import Test, testMinMax, Testhuman
 
 valid_input = False
 while valid_input == False:
