@@ -31,7 +31,7 @@ def writeStdOutputToFile(filePath, text):
 def playTestGames(gamesNumber):
     envTest = ReversiEnv("random", "numpy3c", "lose", 8)
     agent = DDQNAgent(state_size, envTest, 0)
-    agent.load("TestSave/learning_agent_model_weights_trained.h5")
+    agent.load("Save/learning_agent_model_weights_trained.h5")
     agent.epsilon = 0
     opponent = RandomAgent(state_size, action_size, envTest, 1)
     games_won = 0
