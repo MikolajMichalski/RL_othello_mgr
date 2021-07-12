@@ -16,33 +16,43 @@ def syncAgentsWeights(learningAgent, opponentAgent):
     opponentAgent.target_model.set_weights(learningAgent.target_model.get_weights())
 
 def writeStdOutputToFile(filePath, text):
+    print(text)
     original_std_out = sys.stdout
     with open(filePath, "a") as f:
         sys.stdout = f
         print(text)
         sys.stdout = original_std_out
 
-if __name__ == '__main__':
+def start(number_of_layers, verbose):
     episodes_counter = 0
     last_ten_episodes_scores = deque(maxlen=10)
     env = ReversiEnv("random", "numpy3c", "lose", 8)
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
-    learningAgent = DDQNAgent(state_size, env, 0)
+    learningAgent = DDQNAgent(state_size, env, 0, number_of_layers)
     learningAgent.epsilon = 0.
-    learningAgent.load("TestSave/target_model_weights_final_83.0.h5")
+    weights_to_load = ""
+
+    if number_of_layers == 2:
+        weights_to_load = "Weights/2_layers_weights.h5"
+    elif number_of_layers == 3:
+        weights_to_load = "Weights/3_layers_weights.h5"
+    elif number_of_layers == 4:
+        weights_to_load = "Weights/4_layers_weights.h5"
+
+
+    learningAgent.load(weights_to_load)
     opponentAgent = HumanAgent(state_size, action_size, env, 1)
     games_won = 0
-    win_percentage_overall = 0.
-    last_ten_win_percentage = 0.
+    games_lost = 0
+    games_tied = 0
     best_win_percentage = 0.
+    test_win_percentage = 0.
+    test_lost_percentage = 0.
+    test_tied_percentage = 0.
     state = env.reset()
 
-    print(
-        f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
-        f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
-    writeStdOutputToFile(outputFilePath, f"Hyperparameters - Learning rate: {learningAgent.learning_rate}, replay buffer size: {learningAgent.replay_buffer_size}, gamma: {learningAgent.gamma}, \n"
-        f"epsilon min: {learningAgent.epsilon_min}, epsilon decay: {learningAgent.epsilon_decay}, batch size: {BATCH_SIZE}")
+    print(f"EXECUTING {EPISODES} TEST GAMES AGAINST {opponentAgent.__class__.__name__}.")
 
 
     while True:
@@ -96,36 +106,42 @@ if __name__ == '__main__':
             white_score = len(np.where(env.state[1, :, :] == 1)[0])
 
             if black_score>white_score:
+
                 last_ten_episodes_scores.append(1)
                 games_won += 1
-                win_percentage_overall = games_won / episodes_counter * 100
-                last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
+                test_win_percentage = games_won / episodes_counter * 100
+                test_lost_percentage = games_lost / episodes_counter * 100
+                test_tied_percentage = games_tied / episodes_counter * 100
 
-                print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
-                                                                                    games_won, episodes_counter,
-                                                                                    games_won / episodes_counter * 100,
-                                                                                    black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-                writeStdOutputToFile(outputFilePath, "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
-                    games_won, episodes_counter,
-                    win_percentage_overall,
-                    black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
-
-            else:
-                last_ten_episodes_scores.append(0)
-                last_ten_win_percentage = last_ten_episodes_scores.count(1) * 10
-                print(
-                    "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
-                                                                                    games_won,
-                                                                                    episodes_counter,
-                                                                                    games_won / episodes_counter * 100,
-                                                                                    black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
                 writeStdOutputToFile(outputFilePath,
-                                     "Games won/total: {}/{}, win %: {:.4}%, last score - black/white:{}/{}, learning agent epsilon: {}, last 100 games win precentage: {}".format(
-                                        games_won, episodes_counter,
-                                         win_percentage_overall,
-                                         black_score, white_score, learningAgent.epsilon, last_ten_win_percentage))
+                                     f"Game {episodes_counter} result - B/W: {black_score}/{white_score}\n"
+                                     f" RL Agent won games percentage: {test_win_percentage}\n"
+                                     f" RL Agent lost games percentage: {test_lost_percentage}\n"
+                                     f" RL Agent tied games percentage: {test_tied_percentage}\n")
 
+            elif black_score<white_score:
+                games_lost += 1
+                test_win_percentage = games_won / episodes_counter * 100
+                test_lost_percentage = games_lost / episodes_counter * 100
+                test_tied_percentage = games_tied / episodes_counter * 100
+                last_ten_episodes_scores.append(0)
+
+                writeStdOutputToFile(outputFilePath,
+                                     f"Game {episodes_counter} result - B/W: {black_score}/{white_score}\n"
+                                     f" RL Agent won games percentage: {test_win_percentage}\n"
+                                     f" RL Agent lost games percentage: {test_lost_percentage}\n"
+                                     f" RL Agent tied games percentage: {test_tied_percentage}\n")
+            elif black_score == white_score:
+                games_tied += 1
+                test_win_percentage = games_won / episodes_counter * 100
+                test_lost_percentage = games_lost / episodes_counter * 100
+                test_tied_percentage = games_tied / episodes_counter * 100
+
+                writeStdOutputToFile(outputFilePath,
+                                     f"Game {episodes_counter} result - B/W: {black_score}/{white_score}\n"
+                                     f" RL Agent won games percentage: {test_win_percentage}\n"
+                                     f" RL Agent lost games percentage: {test_lost_percentage}\n"
+                                     f" RL Agent tied games percentage: {test_tied_percentage}\n")
             state = env.reset()
 
 

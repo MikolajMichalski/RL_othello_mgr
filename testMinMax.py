@@ -22,15 +22,27 @@ def writeStdOutputToFile(filePath, text):
         print(text)
         sys.stdout = original_std_out
 
-if __name__ == '__main__':
+def start(number_of_layers, min_max_depth, verbose):
 
     envTest = ReversiEnv("random", "numpy3c", "lose", 8)
     state_size = envTest.observation_space.shape[0]
     action_size = envTest.action_space.n
-    agent = DDQNAgent(state_size, envTest, 0) #RandomAgent(state_size, action_size, envTest, 0)#
-    agent.load("TestSave/target_model_weights_final_83.0.h5")
+    agent = DDQNAgent(state_size, envTest, 0, number_of_layers)
+
+
+    weights_to_load = ""
+
+    if number_of_layers == 2:
+        weights_to_load = "Weights/2_layers_weights.h5"
+    elif number_of_layers == 3:
+        weights_to_load = "Weights/3_layers_weights.h5"
+    elif number_of_layers == 4:
+        weights_to_load = "Weights/4_layers_weights.h5"
+
+
+    agent.load(weights_to_load)
     agent.epsilon = 0
-    opponent = MinMaxAgent(envTest, 2, 1)
+    opponent = MinMaxAgent(envTest, min_max_depth, 1)
     games_won = 0
     games_lost = 0
     games_tied = 0
@@ -39,6 +51,9 @@ if __name__ == '__main__':
     test_tied_percentage =0.
     stateTest = envTest.reset()
     test_episodes_counter = 0
+
+    print(f"EXECUTING {EPISODES} TEST GAMES AGAINST {agent.__class__.__name__}.")
+    print(f"MinMax depth is {opponent.max_depth}")
     while True:
         stateTest = np.reshape(stateTest, [1, state_size])
         envTest.currently_playing_color = agent.player_color
@@ -56,7 +71,8 @@ if __name__ == '__main__':
             envTest.pass_place_counter += 1
             if envTest.pass_place_counter > 1:
                 done = True
-
+        if verbose:
+            envTest.render()
         envTest.currently_playing_color = opponent.player_color
 
         envTest.possible_actions = ReversiEnv.get_possible_actions(envTest.state, envTest.currently_playing_color)
@@ -73,7 +89,8 @@ if __name__ == '__main__':
                 done = True
 
         stateTest = next_state_test
-
+        if verbose:
+            envTest.render()
         if done:
             test_episodes_counter += 1
             black_score_test = len(np.where(envTest.state[0, :, :] == 1)[0])
@@ -86,10 +103,10 @@ if __name__ == '__main__':
                 test_tied_percentage = games_tied / test_episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}"
-                                     f" Test games win percentage: {test_win_percentage}"
-                                     f" Test games lost percentage: {test_lost_percentage}"
-                                     f" Test games tied percentage: {test_tied_percentage}")
+                                     f"Game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}\n"
+                                     f" RL Agent games won percentage: {test_win_percentage}\n"
+                                     f" RL Agent games lost percentage: {test_lost_percentage}\n"
+                                     f" RL Agent games tied percentage: {test_tied_percentage}\n")
             elif black_score_test < white_score_test:
                 games_lost += 1
                 test_win_percentage = games_won / test_episodes_counter * 100
@@ -97,10 +114,10 @@ if __name__ == '__main__':
                 test_tied_percentage = games_tied / test_episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}"
-                                     f" Test games win percentage: {test_win_percentage}"
-                                     f" Test games lost percentage: {test_lost_percentage}"
-                                     f" Test games tied percentage: {test_tied_percentage}")
+                                     f"Game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}\n"
+                                     f" RL Agent games won percentage: {test_win_percentage}\n"
+                                     f" RL Agent games lost percentage: {test_lost_percentage}\n"
+                                     f" RL Agent games tied percentage: {test_tied_percentage}\n")
             elif black_score_test == white_score_test:
                 games_tied += 1
                 test_win_percentage = games_won / test_episodes_counter * 100
@@ -108,10 +125,10 @@ if __name__ == '__main__':
                 test_tied_percentage = games_tied / test_episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Test game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}"
-                                     f" Test games win percentage: {test_win_percentage}"
-                                     f" Test games lost percentage: {test_lost_percentage}"
-                                     f" Test games tied percentage: {test_tied_percentage}")
+                                     f"Game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}\n"
+                                     f" RL Agent games won percentage: {test_win_percentage}\n"
+                                     f" RL Agent games lost percentage: {test_lost_percentage}\n"
+                                     f" RL Agent games tied percentage: {test_tied_percentage}\n")
             stateTest = envTest.reset()
         if test_episodes_counter == EPISODES:
             break

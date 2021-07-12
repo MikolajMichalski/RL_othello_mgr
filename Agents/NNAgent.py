@@ -14,7 +14,7 @@ from Reversi_combined import ReversiEnv
 
 class DDQNAgent:
 
-    def __init__(self, state_size, env, player_color):
+    def __init__(self, state_size, env, player_color, number_of_layers):
         self.state_size = state_size
         self.replay_buffer_size = 15000
         self.memory = deque(maxlen=self.replay_buffer_size)
@@ -23,6 +23,7 @@ class DDQNAgent:
         self.epsilon_min = 0.1
         self.epsilon_decay = 0.995
         self.learning_rate = 0.001
+        self.number_of_layers = number_of_layers
         self.model = self.initiate_model()
         self.target_model = self.initiate_model()
         self.env = env
@@ -31,10 +32,10 @@ class DDQNAgent:
 
     def initiate_model(self):
         model = Sequential()
+
         model.add(Dense(256, input_dim=192, activation='relu', kernel_initializer='normal'))
-        model.add(Dense(256, activation='relu', kernel_initializer='normal'))
-        model.add(Dense(256, activation='relu', kernel_initializer='normal'))
-        model.add(Dense(256, activation='relu', kernel_initializer='normal'))
+        for i in range(self.number_of_layers - 2):
+            model.add(Dense(256, activation='relu', kernel_initializer='normal'))
         model.add(Dense(64, activation="softmax", kernel_initializer='normal'))
         model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
         return model
@@ -71,6 +72,7 @@ class DDQNAgent:
 
     def save(self, name):
         self.model.save_weights(name)
+
 
     def sync_target_model(self):
         # copy weights from model to target_model

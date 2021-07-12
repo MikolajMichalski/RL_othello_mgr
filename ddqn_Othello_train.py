@@ -220,7 +220,6 @@ if __name__ == '__main__':
                 test_games_win_percentage = playTestGames(TEST_GAMES)
                 if test_games_win_percentage >= best_test_games_win_percentage:
                     best_test_games_win_percentage = test_games_win_percentage
-                    #learningAgent.sync_target_model()
                     writeStdOutputToFile(outputFilePath, "Saving model weights!")
                     learningAgent.save(f"TestSave/model_weights_{test_games_win_percentage}.h5")
                     learningAgent.target_model.save(
