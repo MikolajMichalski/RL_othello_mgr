@@ -8,7 +8,7 @@ from copy import deepcopy
 import numpy as np
 EPISODES = 1000
 BATCH_SIZE = 30
-outputFilePath = "TestSave/TEST_log_MinMax_w83_depth_4.txt"
+outputFilePath = "Output/TEST_log_MinMax_w83_depth_4.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):

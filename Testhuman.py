@@ -9,7 +9,7 @@ from copy import deepcopy
 import numpy as np
 EPISODES = 100
 BATCH_SIZE = 30
-outputFilePath = "TestSave/Test_weights83.txt"
+outputFilePath = "Output/Test_weights83.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):
