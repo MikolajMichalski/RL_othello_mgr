@@ -38,23 +38,24 @@ class HumanAgent:
                 possible_actions_to_make_coords[i] = ReversiEnv.action_to_coordinate(self.env.state, action)
                 i += 1
 
-            print(f"Possible actions to make: \n")
+            print(f"Możliwe do wykonania akcje: \n")
 
             for key, value in possible_actions_to_make_coords.items():
                 print(f"{key})  x:{value[1] + 1} y:{value[0] + 1} \n")
 
             valid_input = False
             while valid_input == False:
-                human_input = input("Please chose action")
+                human_input = input("Wybierz akcję\n"
+                                    "Akcja: ")
 
                 try:
                     int_input = int(human_input)
                     if int_input not in possible_actions_to_make_coords.keys():
-                        print("Please input proper possible action number!!!")
+                        print("Wprowadzono błędne dane!!!\n")
                         continue
                     valid_input = True
                 except ValueError:
-                    print("Incorrect input!!! Please input integer value!!!")
+                    print("Wprowadzono błędne dane!!!\n")
                     continue
 
             human_action = ReversiEnv.coordinate_to_action(self.env.state, possible_actions_to_make_coords[int_input])

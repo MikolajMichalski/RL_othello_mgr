@@ -9,7 +9,7 @@ from copy import deepcopy
 import numpy as np
 EPISODES = 100
 BATCH_SIZE = 30
-outputFilePath = "Output/Test_weights83.txt"
+outputFilePath = "Output/Human_play.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):
@@ -52,7 +52,7 @@ def start(number_of_layers, verbose):
     test_tied_percentage = 0.
     state = env.reset()
 
-    print(f"EXECUTING {EPISODES} TEST GAMES AGAINST {opponentAgent.__class__.__name__}.")
+    print(f"Rozpoczęto rozgrywkę {EPISODES} gier przeciwko {opponentAgent.__class__.__name__}.")
 
 
     while True:
@@ -114,10 +114,10 @@ def start(number_of_layers, verbose):
                 test_tied_percentage = games_tied / episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Game {episodes_counter} result - B/W: {black_score}/{white_score}\n"
-                                     f" RL Agent won games percentage: {test_win_percentage}\n"
-                                     f" RL Agent lost games percentage: {test_lost_percentage}\n"
-                                     f" RL Agent tied games percentage: {test_tied_percentage}\n")
+                                     f"Wynik gry {episodes_counter} - C/B: {black_score}/{white_score}\n"
+                                     f"Procent wyganych gier agenta RL: {test_win_percentage}\n"
+                                     f"Procent przegranch gier agenta RL: {test_lost_percentage}\n"
+                                     f"Procent zremisowanych gier agenta RL: {test_tied_percentage}\n")
 
             elif black_score<white_score:
                 games_lost += 1
@@ -127,10 +127,10 @@ def start(number_of_layers, verbose):
                 last_ten_episodes_scores.append(0)
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Game {episodes_counter} result - B/W: {black_score}/{white_score}\n"
-                                     f" RL Agent won games percentage: {test_win_percentage}\n"
-                                     f" RL Agent lost games percentage: {test_lost_percentage}\n"
-                                     f" RL Agent tied games percentage: {test_tied_percentage}\n")
+                                     f"Wynik gry {episodes_counter} - C/B: {black_score}/{white_score}\n"
+                                     f"Procent wyganych gier agenta RL: {test_win_percentage}\n"
+                                     f"Procent przegranch gier agenta RL: {test_lost_percentage}\n"
+                                     f"Procent zremisowanych gier agenta RL: {test_tied_percentage}\n")
             elif black_score == white_score:
                 games_tied += 1
                 test_win_percentage = games_won / episodes_counter * 100
@@ -138,10 +138,10 @@ def start(number_of_layers, verbose):
                 test_tied_percentage = games_tied / episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Game {episodes_counter} result - B/W: {black_score}/{white_score}\n"
-                                     f" RL Agent won games percentage: {test_win_percentage}\n"
-                                     f" RL Agent lost games percentage: {test_lost_percentage}\n"
-                                     f" RL Agent tied games percentage: {test_tied_percentage}\n")
+                                     f"Wynik gry {episodes_counter} - C/B: {black_score}/{white_score}\n"
+                                     f"Procent wyganych gier agenta RL: {test_win_percentage}\n"
+                                     f"Procent przegranch gier agenta RL: {test_lost_percentage}\n"
+                                     f"Procent zremisowanych gier agenta RL: {test_tied_percentage}\n")
             state = env.reset()
 
 

@@ -8,7 +8,7 @@ from copy import deepcopy
 import numpy as np
 EPISODES = 1000
 BATCH_SIZE = 30
-outputFilePath = "Output/TEST_log_MinMax_w83_depth_4.txt"
+outputFilePath = "Output/MinMax_Play.txt"
 import sys
 
 def syncAgentsWeights(learningAgent, opponentAgent):
@@ -52,7 +52,7 @@ def start(number_of_layers, min_max_depth, verbose):
     stateTest = envTest.reset()
     test_episodes_counter = 0
 
-    print(f"EXECUTING {EPISODES} TEST GAMES AGAINST {agent.__class__.__name__}.")
+    print(f"Rozpoczęto rozgrywkę {EPISODES} gier przeciwko {agent.__class__.__name__}.")
     print(f"MinMax depth is {opponent.max_depth}")
     while True:
         stateTest = np.reshape(stateTest, [1, state_size])
@@ -103,10 +103,10 @@ def start(number_of_layers, min_max_depth, verbose):
                 test_tied_percentage = games_tied / test_episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}\n"
-                                     f" RL Agent games won percentage: {test_win_percentage}\n"
-                                     f" RL Agent games lost percentage: {test_lost_percentage}\n"
-                                     f" RL Agent games tied percentage: {test_tied_percentage}\n")
+                                     f"Wynik gry {test_episodes_counter} - C/B: {black_score_test}/{white_score_test}\n"
+                                     f"Procent wyganych gier agenta RL: {test_win_percentage}\n"
+                                     f"Procent przegranch gier agenta RL: {test_lost_percentage}\n"
+                                     f"Procent zremisowanych gier agenta RL: {test_tied_percentage}\n")
             elif black_score_test < white_score_test:
                 games_lost += 1
                 test_win_percentage = games_won / test_episodes_counter * 100
@@ -114,10 +114,10 @@ def start(number_of_layers, min_max_depth, verbose):
                 test_tied_percentage = games_tied / test_episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}\n"
-                                     f" RL Agent games won percentage: {test_win_percentage}\n"
-                                     f" RL Agent games lost percentage: {test_lost_percentage}\n"
-                                     f" RL Agent games tied percentage: {test_tied_percentage}\n")
+                                     f"Wynik gry {test_episodes_counter} - C/B: {black_score_test}/{white_score_test}\n"
+                                     f"Procent wyganych gier agenta RL: {test_win_percentage}\n"
+                                     f"Procent przegranch gier agenta RL: {test_lost_percentage}\n"
+                                     f"Procent zremisowanych gier agenta RL: {test_tied_percentage}\n")
             elif black_score_test == white_score_test:
                 games_tied += 1
                 test_win_percentage = games_won / test_episodes_counter * 100
@@ -125,10 +125,10 @@ def start(number_of_layers, min_max_depth, verbose):
                 test_tied_percentage = games_tied / test_episodes_counter * 100
 
                 writeStdOutputToFile(outputFilePath,
-                                     f"Game {test_episodes_counter} result - B/W: {black_score_test}/{white_score_test}\n"
-                                     f" RL Agent games won percentage: {test_win_percentage}\n"
-                                     f" RL Agent games lost percentage: {test_lost_percentage}\n"
-                                     f" RL Agent games tied percentage: {test_tied_percentage}\n")
+                                     f"Wynik gry {test_episodes_counter} - C/B: {black_score_test}/{white_score_test}\n"
+                                     f"Procent wyganych gier agenta RL: {test_win_percentage}\n"
+                                     f"Procent przegranch gier agenta RL: {test_lost_percentage}\n"
+                                     f"Procent zremisowanych gier agenta RL: {test_tied_percentage}\n")
             stateTest = envTest.reset()
         if test_episodes_counter == EPISODES:
             break

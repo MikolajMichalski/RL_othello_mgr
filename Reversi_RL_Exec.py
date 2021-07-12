@@ -6,7 +6,8 @@ while valid_input == False:
     number_of_layers_input = input("Wybierz architekturę sieci neuronowej: \n"
                         "1) 2 warstwy ukryte\n"
                         "2) 3 warstwy ukryte\n"
-                        "3) 4 warstwy ukryte\n")
+                        "3) 4 warstwy ukryte\n"
+                                   "Wybór: ")
 
     try:
         num_layers_int = int(number_of_layers_input)
@@ -26,7 +27,8 @@ while valid_input1 == False:
     opponent_agent_type = input("Wybierz rodzaj przeciwnika: \n"
                         "1) przeciwnik losowy\n"
                         "2) przeciwnik MinMax\n"
-                        "3) człowiek\n")
+                        "3) człowiek\n"
+                                "Wybór: ")
 
     try:
         opponent_int_input = int(opponent_agent_type)
@@ -39,7 +41,7 @@ while valid_input1 == False:
 
             while valid_input3 == False:
 
-                min_max_depth_input = input("Wybierz głębokość MinMax: \n")
+                min_max_depth_input = input("Podaj głębokość MinMax: ")
 
                 try:
                     min_max_depth_int = int(min_max_depth_input)
@@ -61,7 +63,8 @@ while valid_input4 == False:
 
     verbose_input = input("Włączyć tryb podglądu?: \n"
                           "1) TAK\n"
-                          "2) NIE\n")
+                          "2) NIE\n"
+                          "Wybór: ")
 
     try:
         verbose_input_int = int(verbose_input)
